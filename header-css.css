@@ -1,0 +1,40 @@
+html{
+	background-size: cover;
+	background-image:url("background-overwatch-top.jpg");
+}
+@font-face{
+	font-family: 'overwatch';
+	src: url('koverwatch.ttf');
+}
+header{
+	color:white;
+	font-family: 'overwatch';
+	border-bottom:solid black;
+	font-size:1.5em;
+}
+img{
+	height:2em;
+	width:2em;
+	
+}
+a{
+	color: white;
+	text-decoration:none;
+}
+table{
+	text-align:center;
+	margin-top: 2em;
+	margin-bottom:1em;
+}
+td{
+	padding-right:1em;
+	padding-left:1em;
+	text-align: center;
+	border-right:solid black;
+	
+}
+
+.last{
+	border-right:none;
+	padding-right: 0em;
+}

@@ -1,21 +1,21 @@
 html{
 	background-size: cover;
-	background-image:url("background-overwatch-top.jpg");
+	background-image:url("images/background-overwatch-top.jpg");
 }
-@font-face{
-	font-family: 'overwatch';
-	src: url('koverwatch.ttf');
+@font-face { 
+font-family: Overwatch; 
+src: url("http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff");
 }
 header{
 	color:white;
-	font-family: 'overwatch';
+	font-family: 'Overwatch';
 	border-bottom:solid black;
 	font-size:1.5em;
 }
-img{
-	height:2em;
-	width:2em;
-	
+
+#logo{
+	height: 2.5em;
+	width: 15em;
 }
 a{
 	color: white;
@@ -30,8 +30,9 @@ td{
 	padding-right:1em;
 	padding-left:1em;
 	text-align: center;
+	font-size: 1.25em;
 	border-right:solid black;
-	
+	color: #D7D8E7;
 }
 
 .last{

@@ -7,6 +7,7 @@ font-family: Overwatch;
 src: url("http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff");
 }
 header{
+	padding-bottom: 2em;
 	color:white;
 	font-family: 'Overwatch';
 	border-bottom:solid black;
@@ -16,6 +17,7 @@ header{
 #logo{
 	height: 2.5em;
 	width: 15em;
+	padding-left: 0.5em;
 }
 a{
 	color: white;
@@ -26,6 +28,24 @@ table{
 	margin-top: 2em;
 	margin-bottom:1em;
 }
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	padding-top: 1em;
+    overflow: hidden;
+}
+
+header li {
+	border-right: solid black;
+	padding: 0em 1em 0em 1em;
+	text-align: center;
+	font-size: 1.5em;
+    float: left;
+}
+header li:hover{
+	background-color: orange;
+}
 td{
 	padding-right:1em;
 	padding-left:1em;
@@ -34,8 +54,6 @@ td{
 	border-right:solid black;
 	color: #D7D8E7;
 }
-
 .last{
 	border-right:none;
-	padding-right: 0em;
 }

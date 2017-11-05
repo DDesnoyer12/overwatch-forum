@@ -14,7 +14,7 @@
 		<div class="character-div">
 			<ul class="characters">
 				
-				<li><img src = "images/characters/renders/Doomfist.png"/><p>Doomfist (MISSING)</p></li>
+				<li><img src = "images/characters/renders/Doomfist.png"/><p>Doomfist</p></li>
 				<li><img src = "images/characters/renders/Genji.png"/><p>Genji</p></li>
 				<li><img src = "images/characters/renders/McCree.png"/><p>McCree</p></li>
 				<li><img src = "images/characters/renders/Pharah.png"/><p>Pharah</p></li>
@@ -37,7 +37,7 @@
 				<li><img src = "images/characters/renders/Ana.png"/><p>Ana</p></li>
 				<li><img src = "images/characters/renders/Lucio.png"/><p>Lucio</p></li>
 				<li><img src = "images/characters/renders/Mercy.png"/><p>Mercy</p></li>
-				<li><img src = "images/characters/renders/Moira.png"/><p>Moira (MISSING)</p></li>
+				<li><img src = "images/characters/renders/Moira.png"/><p>Moira</p></li>
 				<li><img src = "images/characters/renders/Symmetra.png"/><p>Symmetra</p></li>
 				<li><img src = "images/characters/renders/Zenyatta.png"/><p>Zenyatta</p></li>
 				

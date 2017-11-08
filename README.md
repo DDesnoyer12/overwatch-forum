@@ -1,8 +1,6 @@
 # CS3500-Final-Project
 
-Creators: Daniel Desnoyer
-          Richad Schaefer
-          Mathew Schutz
+Creators: Daniel Desnoyer, Richad Schaefer, & Mathew Schutz
 
 Due Date: 12 December 2017
 

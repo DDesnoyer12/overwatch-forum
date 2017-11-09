@@ -1,0 +1,49 @@
+html{
+	background-size: cover;
+	background-image:url("../images/background-overwatch-top.jpg");
+	background-attachment: fixed;
+}
+@font-face { 
+font-family: Overwatch; 
+src: url("http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff");
+}
+header{
+	padding-bottom: 2.75em;
+	color:white;
+	font-family: 'Overwatch';
+	border-bottom:solid black;
+	font-size:1.5em;
+}
+
+#logo{
+	height: 2.5em;
+	width: 15em;
+	padding-left: 0.5em;
+}
+a{
+	color: #D7D8E7;
+
+	text-decoration:none;
+}
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	padding-top: 1em;
+    overflow: hidden;
+}
+
+header li {
+	border-right: solid black;
+	padding: 0em 1em 0em 1em;
+	text-align: center;
+	font-size: 1.5em;
+    float: left;
+}
+header li:hover{
+	background-color: orange;
+}
+
+.last{
+	border-right:none;
+}

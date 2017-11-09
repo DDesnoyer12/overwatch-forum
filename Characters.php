@@ -1,16 +1,20 @@
+<?php 
+
+?>
 <!DOCTYPE html>
 <html>
 <head lang = "en">
 	<meta charset="utf-8">
 	<title>An Overwatch Fan Website</title>
-	<link rel="stylesheet" href="reset.css" />
-	<link rel="stylesheet" href="header-css.css" />
-	<link rel="stylesheet" href="Characters.css" />
+	<link rel="stylesheet" href="styles/reset.css" />
+	<link rel="stylesheet" href="styles/css-header.css" />
+	<link rel="stylesheet" href="styles/css-characters.css" />
 </head>
 <body>
 <?php include 'includes/final-header.php'; ?>
 <article>
 	<section>
+<<<<<<< HEAD
 		<div class="character-div">
 			<ul class="characters">
 				
@@ -49,7 +53,34 @@
 				<li><img src = "images/characters/renders/Zenyatta.png"/><p>Zenyatta</p></li>
 				
 				
+=======
+		<h1>CHARACTERS</h1>
+		<div id="character-list">
+			<ul>
+				<li><a href="#">All</a></li>
+				<li><a href="#">Offense</a></li>
+				<li><a href="#">Defense</a></li>
+				<li><a href="#">Tank</a></li>
+				<li><a href="#">Support</a></li>
+>>>>>>> 462688c4fe68a8c95b6b4cc0d54768b6625bd304
 			</ul>
+		</div>
+		<div id="character-div">
+			<table>
+				<?php 
+					$characters = file("text files/Characters.txt");
+					$var = 0;
+					foreach($characters as $name) {
+						if($var == 0) { echo '<tr>';}
+						echo '<td><p>'.$name.'</p><img src="images/characters/renders/'.$name.'.png"/></td>';
+						$var = $var+1;
+						if($var == 5) {
+							echo '</tr>';
+							$var = 0;
+						}
+					}
+				?>
+			</table>
 		</div>
 	</section>
 </article>

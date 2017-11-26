@@ -1,0 +1,4 @@
+Biotic Rifle	Shoots healing shots at allies and damaging shots at enemies
+Sleep Dart	Fires a dart from her sidearm putting the enemy to sleep
+Biotic Grenade	Tosses a bomb that deals damage to enemies and heals allies within range
+Nano Boost	Ana's Ultimate Ability allows her to temporarily boost an allies movement speed and increase their attack damage and defense

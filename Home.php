@@ -5,6 +5,7 @@
 	<title>An Overwatch Fan Website</title>
 	<link rel="stylesheet" href="styles/reset.css"/>
 	<link rel="stylesheet" href="styles/css-header.css" />
+	<link rel="stylesheet" href="styles/css-footer.css" />
 </head>
 <body>
 <?php 
@@ -21,6 +22,7 @@
 <td class = "last"><a href = "#">Tier List </a></td></tr>
 </table>
 </header> -->
+<?php include 'includes/final-footer.php'; ?>
 </body>
 
 </html>

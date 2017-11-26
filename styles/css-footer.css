@@ -1,0 +1,11 @@
+footer {
+	background-color: rgba(0, 0, 0, 0.5);
+	font-family: Arial;
+	color: #D7D8E7;
+}
+footer table td p {
+	margin: 1em;
+}
+footer table {
+	color: Orange;
+}

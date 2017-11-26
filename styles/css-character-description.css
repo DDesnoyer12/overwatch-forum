@@ -1,0 +1,67 @@
+@font-face { 
+font-family: Overwatch; 
+src: url("http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff");
+}
+
+h1 {
+	text-align: center;
+	font-family: Overwatch;
+	font-size: 10em;
+	color: #D7D8E7;
+}
+
+h2 {
+	text-align: center;
+	font-family: Overwatch;
+	font-size: 4em;
+	color: #D7D8E7;
+	text-align: left;
+	
+}
+.abilities td{
+	font-family: Overwatch;
+	color: #D7D8E7;
+	font-size: 2em;
+	border: solid blac 0.3em;
+}
+
+.comment {
+	border: solid #D7D8E7 0.1em;
+	border-radius: 1em;
+	margin: 1em 2.5em 1em 5em;
+	padding: 1em 0em 1em 0em;
+	background-color: #D7D8E7;
+}
+
+.author {
+	font-size: 4em;
+	font-family: Overwatch;
+}
+
+.comment-body {
+	font-size: 3em;
+	font-family: Overwatch;
+	padding-left: 3em;
+}
+
+label {
+	font-size: 2em;
+	color: #D7D8E7;
+	font-family: Overwatch;
+	text-align: left;
+}
+textarea {
+	margin-top: 2em;
+	vertical-align: top;
+	width: 20em;
+	height: 20em;
+}
+
+input[type="submit"] {
+	background-color: #D7D8E7;
+	margin-top: 0.5em;
+	margin-left: 0.5em;
+	padding: .25em;
+}
+
+

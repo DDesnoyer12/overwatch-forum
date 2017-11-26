@@ -1,5 +1,6 @@
 <head>
 	<link rel="stylesheet" href="styles/css-header.css" />
+	<link rel="icon" href="images/favicon.png" />
 </head>
 <header>
 		<img id="logo" src="images/overwatchlogo.png"/>

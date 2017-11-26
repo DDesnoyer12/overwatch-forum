@@ -10,6 +10,7 @@ if($_GET) {
 	<title>An Overwatch Fan Website</title>
 	<link rel="stylesheet" href="styles/reset.css" />
 	<link rel="stylesheet" href="styles/css-characters.css" />
+	<link rel="icon" href="images/favicon.png" />
 </head>
 <body>
 <?php include 'includes/final-header.php'; ?>

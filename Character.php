@@ -31,6 +31,7 @@ foreach($abilityFile as $ability) {
 	<?php echo '<title>'.$id.'</title>'; ?>
 	<link rel="stylesheet" href="styles/reset.css" />
 	<link rel="stylesheet" href="styles/css-character-description.css" />
+	<link rel="icon" href="images/favicon.png" />
 </head>
 <body>
 <?php include 'includes/final-header.php'; ?>

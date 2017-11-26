@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="styles/reset.css"/>
 	<link rel="stylesheet" href="styles/css-other.css" />
 	<link rel="stylesheet" href="styles/css-footer.css" />
+	<link rel="icon" href="images/favicon.png" />
 </head>
 <body>
 <?php include 'includes/final-header.php'; ?>

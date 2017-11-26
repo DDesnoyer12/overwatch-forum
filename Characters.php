@@ -9,9 +9,7 @@ if($_GET) {
 	<meta charset="utf-8">
 	<title>An Overwatch Fan Website</title>
 	<link rel="stylesheet" href="styles/reset.css" />
-	<link rel="stylesheet" href="styles/css-header.css" />
 	<link rel="stylesheet" href="styles/css-characters.css" />
-	<link rel="stylesheet" href="styles/css-footer.css" />
 </head>
 <body>
 <?php include 'includes/final-header.php'; ?>

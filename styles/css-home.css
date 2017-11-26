@@ -1,0 +1,17 @@
+@font-face { 
+font-family: Overwatch; 
+src: url("http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff");
+}
+
+h1 {
+	font-family: Overwatch;
+	font-size: 10em;
+	color: #D7D8E8;
+	text-align: center;
+}
+
+#home-logo {
+	zoom: 2;
+	display: block;
+	margin: 0 auto;
+}

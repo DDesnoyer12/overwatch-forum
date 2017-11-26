@@ -16,8 +16,7 @@ header{
 }
 
 #logo{
-	height: 2.5em;
-	width: 15em;
+	zoom: 1.5;
 	padding-left: 0.5em;
 }
 a{

@@ -30,9 +30,7 @@ foreach($abilityFile as $ability) {
 	<meta charset="utf-8">
 	<?php echo '<title>'.$id.'</title>'; ?>
 	<link rel="stylesheet" href="styles/reset.css" />
-	<link rel="stylesheet" href="styles/css-header.css" />
 	<link rel="stylesheet" href="styles/css-character-description.css" />
-	<link rel="stylesheet" href="styles/css-footer.css" />
 </head>
 <body>
 <?php include 'includes/final-header.php'; ?>

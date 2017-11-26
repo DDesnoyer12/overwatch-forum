@@ -4,24 +4,18 @@
 	<meta charset="utf-8">
 	<title>An Overwatch Fan Website</title>
 	<link rel="stylesheet" href="styles/reset.css"/>
-	<link rel="stylesheet" href="styles/css-header.css" />
-	<link rel="stylesheet" href="styles/css-footer.css" />
+	<link rel="stylesheet" href="styles/css-home.css" />
 </head>
 <body>
 <?php 
 	include 'includes/final-header.php';
 ?>
-<!--
-<header>
-<table>
-<tr>
-<td><img id="logo" src="images/overwatchlogo.png"/></td>
-<td><a href = "#">Home </a></td>
-<td><a href = "#">Maps </a></td>
-<td><a href = "#">Characters</a></td>
-<td class = "last"><a href = "#">Tier List </a></td></tr>
-</table>
-</header> -->
+<section>
+	<div>
+		<img  id="home-logo" src="images/overwatch-home-logo.png" />
+		<h1>What is Overwatch?</h1>
+	</div>
+</section>
 <?php include 'includes/final-footer.php'; ?>
 </body>
 

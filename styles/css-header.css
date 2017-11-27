@@ -11,12 +11,11 @@ header{
 	padding-bottom: 2.75em;
 	color:white;
 	font-family: 'Overwatch';
-	border-bottom:solid black;
 	font-size:1.5em;
 }
 
 #logo{
-	zoom: 1.5;
+	zoom: 1;
 	padding-left: 0.5em;
 }
 a{

@@ -45,8 +45,14 @@ h1 {
 #character-div table tr td:hover {
 	background-color: orange;
 }
+#character-div table tr td:hover p {
+	color: black;
+}
 .render {
 	zoom: 50%;
+}
+.roleicon {
+	zoom: 25%;
 }
 #character-div table img{
 	

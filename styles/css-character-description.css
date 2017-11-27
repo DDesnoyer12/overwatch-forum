@@ -18,11 +18,30 @@ h2 {
 	text-align: left;
 	
 }
-.abilities td{
+.ability-name {
+	font-size: 1.5em;
 	font-family: Overwatch;
 	color: #D7D8E7;
+}
+
+#roleicon {
+	display: inline;
+	margin: 0 auto;
+	zoom: .5;
+}
+.ability-table {
+	margin-left: 35em;
+	margin-right: 20em;
+}
+.abilities th{
+	font-family: Overwatch;
+	color: #D7D8E7;
+	font-size: 5em;
+}
+.abilities td{
+	font-family: Overwatch;
+	color: orange;
 	font-size: 2em;
-	border: solid blac 0.3em;
 }
 
 .comment {
@@ -44,17 +63,30 @@ h2 {
 	padding-left: 3em;
 }
 
+.comment-section {
+	clear: both;
+}
+
+.portrait {
+	float: left;
+	margin: 0 auto;
+	padding-left: 5em;
+}
 label {
 	font-size: 2em;
 	color: #D7D8E7;
 	font-family: Overwatch;
 	text-align: left;
 }
+input[type="text"] {
+	width: 10em;
+	height: 2em;
+}
 textarea {
 	margin-top: 2em;
 	vertical-align: top;
-	width: 20em;
-	height: 20em;
+	width: 30em;
+	height: 8em;
 }
 
 input[type="submit"] {

@@ -49,7 +49,12 @@ if($_GET) {
 							echo '<td><a href="Hero.php?hero='.$hero['Hero'].'" ><p>'.$hero['Hero'].'</p></a><br/>';
 							echo '<a href = "Hero.php?hero='.$hero['Hero'].'"><img class="render" src="images/characters/renders/'.$hero['Hero'].'.png"/></a></td>';
 							$var = $var+1;
-							if($var == 4) {
+							if($view == "offense") {
+								if($var == 4) {
+									echo '</tr>';
+									$var = 0;
+								}
+							} else if($var == 3) {
 								echo '</tr>';
 								$var = 0;
 							}

@@ -1,0 +1,84 @@
+@font-face { 
+font-family: Overwatch; 
+src: url("http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff");
+}
+
+h1 {
+	text-align: center;
+	font-family: Overwatch;
+	font-size: 10em;
+	color: #D7D8E7;
+}
+
+h2 {
+	text-align: center;
+	font-family: Overwatch;
+	font-size: 1.5em;
+	color: #D7D8E7;
+}
+
+img.pic {
+	zoom: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+#character-tier table, tr, th, td {
+	text-align: center;
+	border-spacing: 0.5rem;
+	/* border-collapse: collapse; */
+	padding: 0.5em;
+	margin: auto;
+	font-size: 1.5em;
+	font-family: Overwatch;
+	color: #D7D8E7;
+	border: 1px solid #D7D8E7;
+}
+
+.one {
+	background-color: #47473e;
+}
+
+.two {
+	background-color: #6a6d64;
+}
+
+.three {
+	background-color: #919182;
+}
+
+.four {
+	background-color: #adada6;
+}
+
+.five {
+	background-color: #adafa8;
+}
+
+.offense {
+	background-color: #3ab50e;
+	
+	
+}
+
+.defense {
+	background-color: #06a098;
+	
+	
+}
+
+.tank {
+	background-color: #560101;
+	
+	
+}
+
+.support {
+	background-color: #ac46ce;
+	
+	
+}
+
+.thead{
+	background-color: #f99e1a;
+}

@@ -10,8 +10,33 @@ h1 {
 	text-align: center;
 }
 
+h2 {
+	font-family: Overwatch;
+	font-size: 1.75em;
+	color: #D7D8E8;
+	text-align: center;
+	margin-right: 2em;
+	margin-left: 2em;
+}
+
+h3 {
+	font-family: Overwatch;
+	font-size: 1.25em;
+	color: #D7D8E8;
+	text-align: center;
+	padding-top: 0.75em;
+	padding-bottom: 1em;
+}
+
 #home-logo {
 	zoom: 2;
 	display: block;
 	margin: 0 auto;
+}
+
+img.pic {
+	zoom: 55%;
+	padding-top: 2.5em;
+    display: block;
+    margin: 0 auto;
 }

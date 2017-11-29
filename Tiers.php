@@ -29,19 +29,19 @@
 			</tr>
 			<tr>
 				<td class="one">Tier 1</td>
-				<td>Lucio</td>
+				<td class="hero"><a href="Hero.php?hero=lucio"><img class="icon" src="images/characters/Icons/Lucio.png"/>Lucio</a></td>
 				<td class="support">Support</td>
-				<td>2</td>
+				<td><img src="images/characters/2Star.png" /></td>
 			</tr>
 			<tr>
 				<td class="one">Tier 1</td>
-				<td>Winston</td>
+				<td class="hero"><img class="icon" src="images/characters/Icons/Winston.png"/>Winston</td>
 				<td class="tank">Tank</td>
 				<td>2</td>
 			</tr>
 			<tr>
 				<td class="two">Tier 2</td>
-				<td>Soldier: 76</td>
+				<td class="hero">Soldier: 76</td>
 				<td class="offense">Offense</td>
 				<td>1</td>
 			</tr>

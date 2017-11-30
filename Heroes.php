@@ -70,7 +70,7 @@ if($_GET) {
 						while($hero = mysqli_fetch_array($results)) {
 							if($var == 0) { echo '<tr>';}
 							echo '<td><a href="Hero.php?hero='.$hero['Hero'].'" ><p>'.$hero['Hero'].'</p></a><br/>';
-							echo '<a href = "Hero.php?hero='.$hero['Hero'].'"><img class="render" src="images/characters/renders/'.$hero['Hero'].'.png"/></a></td>';
+							echo '<a href = "Hero.php?hero='.$hero['Hero'].'"><img class="render" src="images/characters/Renders/'.$hero['Hero'].'.png"/></a></td>';
 							$var = $var+1;
 							if($view == "offense") {
 								if($var == 4) {

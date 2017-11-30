@@ -42,58 +42,6 @@
 		</tr>
 	</table>
 </section>
-<footer>
-<table>
-	<tr>
-		<td>
-			<p>Blizzard Entertainment® <br/>
-			Blizzard Entertainment is a trademark or registered <br/>
-			trademark of Blizzard Entertainment, Inc. in the U.S. <br/>
-			and/or other countries. All rights reserved. </p>
-		</td>
-		<td>
-			<p>Overwatch™ <br/>
-			®2016 Blizzard Entertainment, Inc. All rights reserved. <br/>
-			Overwatch is a trademark or registered trademark of Blizzard <br/>
-			Entertainment, Inc. in the U.S. and/or other countries. </p>
-		</td>
-		<td>
-			<p>Heroes of the Storm™ <br/>
-			©2014 Blizzard Entertainment, Inc. All rights reserved. <br/>
-			Heroes of the Storm is a trademark of Blizzard Entertainment, Inc. <br/>
-			</p>
-		</td>
-		<td>
-			<p>Hearthstone®: Heroes of Warcraft™ <br/>
-			©2014 Blizzard Entertainment, Inc. All rights reserved. <br/>
-			Heroes of Warcraft is a trademark, and Hearthstone is a <br/>
-			registered trademark of Blizzard Entertainment, Inc. in <br/>
-			the U.S. and/or other countries.</p>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<p>StarCraft® <br/>
-			©1998 Blizzard Entertainment, Inc. All rights reserved. <br/>
-			StarCraft and Blizzard Entertainment are trademarks or <br/>
-			registered trademarks of Blizzard Entertainment, Inc. <br/>
-			in the U.S. and/or other countries. </p>
-		</td>
-		<td>
-			<p>Diablo® III<br/>
-			©2012 Blizzard Entertainment, Inc. All rights reserved. <br/>
-			Diablo is a trademark or registered trademark of Blizzard <br/>
-			Entertainment, Inc. in the U.S. and/or other countries. </p>
-		</td>
-		<td>
-			<p>World of Warcraft® <br/>
-			©2004 Blizzard Entertainment, Inc. All rights reserved. <br/>
-			World of Warcraft, Warcraft and Blizzard Entertainment <br/>
-			are trademarks or registered trademarks of Blizzard <br/>
-			Entertainment, Inc. in the U.S. and/or other countries.</p>
-		</td>
-	</tr>
-</table>
-</footer>
+<?php include 'includes/final-footer.php'; ?>
 </body>
 </html>

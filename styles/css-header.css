@@ -12,11 +12,13 @@ header{
 	color:white;
 	font-family: 'Overwatch';
 	font-size:1.5em;
+	border-bottom: solid black .25em;
 }
 
 #logo{
 	zoom: 1;
 	padding-left: 0.5em;
+	vertical-align: middle;
 }
 a{
 	color: #D7D8E7;
@@ -36,10 +38,14 @@ header li {
 	padding: 0em 1em 0em 1em;
 	text-align: center;
 	font-size: 1.5em;
-    float: left;
+    display: inline;
 }
-header li:hover{
+.middle:hover, .last:hover {
 	background-color: orange;
+	color: black;
+}
+header li:hover a {
+	color: black;
 }
 
 .last{

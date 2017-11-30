@@ -1,0 +1,55 @@
+@font-face { 
+font-family: Overwatch; 
+src: url("http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff");
+}
+h1{
+	text-align: center;
+	font-family: Overwatch;
+	font-size: 10em;
+	color: #D7D8E7;
+}
+#map-list ul{
+	text-align: center;
+}
+
+#map-list ul li {
+	display: inline-block;
+	font-family: Overwatch;
+	font-size: 2.5em;
+	color: orange;
+	padding: 0em .5em 0em .5em;
+	text-decoration: underline;
+}
+#map-list ul li a:hover {
+	color: orange;
+}
+.gamemode {
+	font-family: Overwatch;
+	font-size: 2em;
+	color: orange;
+	margin-right: 15em;
+	margin-left: 15em;
+	margin-top: 2em;
+}
+ table {
+	text-align: center;
+	margin: auto;
+}
+table td p {
+	font-size: 2.5em;
+	font-family: Overwatch;
+	color: #D7D8E7;
+}
+
+ table tr td {
+	text-align: center;
+	margin: 1em;
+	padding: 1em;
+}
+
+ table tr td:hover {
+	background-color: orange;
+}
+ table tr td:hover p {
+	color: black;
+}

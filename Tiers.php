@@ -12,7 +12,6 @@
 <?php include 'includes/final-header.php'; ?>
 <article>
 	<section>
-	
 		<h1>Competitve Ranks</h1>
 		<img class ="pic" src="images/comp-ranks.png"></img><br />
 		<br />
@@ -29,159 +28,159 @@
 			</tr>
 			<tr>
 				<td class="one">Tier 1</td>
-				<td class="hero"><a href="Hero.php?hero=lucio"><img class="icon" src="images/characters/Icons/Lucio.png"/>Lucio</a></td>
-				<td class="support">Support</td>
-				<td><img src="images/characters/2Star.png" /></td>
+				<td class="hero"><a href="Hero.php?hero=Lucio"><img class="icon" src="images/characters/Icons/Lucio.png"/>Lucio</a></td>
+				<td class="support"><a href="Heroes.php?view=support">Support</a></td>
+				<td class="difficulty"><img src="images/characters/2Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="one">Tier 1</td>
-				<td class="hero"><img class="icon" src="images/characters/Icons/Winston.png"/>Winston</td>
-				<td class="tank">Tank</td>
-				<td>2</td>
+				<td class="hero"><a href="Hero.php?hero=Winston"><img align="center" class="icon" src="images/characters/Icons/Winston.png"/>Winston</a></td>
+				<td class="tank"><a href="Heroes.php?view=tank">Tank</a></td>
+				<td class="difficulty"><img src="images/characters/2Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="two">Tier 2</td>
-				<td class="hero">Soldier: 76</td>
-				<td class="offense">Offense</td>
-				<td>1</td>
+				<td class="hero"><a href="Hero.php?hero=Soldier 76"><img class="icon" src="images/characters/Icons/Soldier 76.png"/>Soldier: 76</a></td>
+				<td class="offense"><a href="Heroes.php?view=offense">Offense</a></td>
+				<td class="difficulty"><img src="images/characters/1Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="two">Tier 2</td>
-				<td>Reaper</td>
-				<td class="offense">Offense</td>
-				<td>1</td>
+				<td class="hero"><a href="Hero.php?hero=Reaper"><img class="icon" src="images/characters/Icons/Reaper.png"/>Reaper</a></td>
+				<td class="offense"><a href="Heroes.php?view=offense">Offense</a></td>
+				<td class="difficulty"><img src="images/characters/1Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="two">Tier 2</td>
-				<td>Junkrat</td>
-				<td class="defense">Defense</td>
-				<td>2</td>
+				<td class="hero"><a href="Hero.php?hero=Junkrat"><img class="icon" src="images/characters/Icons/Junkrat.png"/>Junkrat</a></td>
+				<td class="defense"><a href="Heroes.php?view=defense">Defense</a></td>
+				<td class="difficulty"><img src="images/characters/2Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="two">Tier 2</td>
-				<td>Ana</td>
-				<td class="support">Support</td>
-				<td>3</td>
+				<td class="hero"><a href="Hero.php?hero=Ana"><img class="icon" src="images/characters/Icons/Ana.png"/>Ana</a></td>
+				<td class="support"><a href="Heroes.php?view=support">Support</a></td>
+				<td class="difficulty"><img src="images/characters/3Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="two">Tier 2</td>
-				<td>Mercy</td>
-				<td class="support">Support</td>
-				<td>1</td>
+				<td class="hero"><a href="Hero.php?hero=Mercy"><img class="icon" src="images/characters/Icons/Mercy.png"/>Mercy</a></td>
+				<td class="support"><a href="Heroes.php?view=support">Support</a></td>
+				<td class="difficulty"><img src="images/characters/1Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="two">Tier 2</td>
-				<td>Zenyatta</td>
-				<td class="support">Support</td>
-				<td>3</td>
+				<td class="hero"><a href="Hero.php?hero=Zenyatta"><img class="icon" src="images/characters/Icons/Zenyatta.png"/>Zenyatta</a></td>
+				<td class="support"><a href="Heroes.php?view=support">Support</a></td>
+				<td class="difficulty"><img src="images/characters/3Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="three">Tier 3</td>
-				<td>Hanzo</td>
-				<td class="defense">Defense</td>
-				<td>3</td>
+				<td class="hero"><a href="Hero.php?hero=Hanzo"><img class="icon" src="images/characters/Icons/Hanzo.png"/>Hanzo</a></td>
+				<td class="defense"><a href="Heroes.php?view=defense">Defense</a></td>
+				<td class="difficulty"><img src="images/characters/3Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="three">Tier 3</td>
-				<td>Doomfist</td>
-				<td class="offense">Offense</td>
-				<td>3</td>
+				<td class="hero"><a href="Hero.php?hero=Doomfist"><img class="icon" src="images/characters/Icons/Doomfist.png"/>Doomfist</a></td>
+				<td class="offense"><a href="Heroes.php?view=offense">Offense</a></td>
+				<td class="difficulty"><img src="images/characters/3Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="three">Tier 3</td>
-				<td>Genji</td>
-				<td class="offense">Offense</td>
-				<td>3</td>
+				<td class="hero"><a href="Hero.php?hero=Genji"><img class="icon" src="images/characters/Icons/Genji.png"/>Genji</a></td>
+				<td class="offense"><a href="Heroes.php?view=offense">Offense</a></td>
+				<td class="difficulty"><img src="images/characters/3Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="three">Tier 3</td>
-				<td>McCree</td>
-				<td class="offense">Offense</td>
-				<td>2</td>
+				<td class="hero"><a href="Hero.php?hero=McCree"><img class="icon" src="images/characters/Icons/McCree.png"/>McCree</a></td>
+				<td class="offense"><a href="Heroes.php?view=offense">Offense</a></td>
+				<td class="difficulty"><img src="images/characters/2Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="three">Tier 3</td>
-				<td>Pharah</td>
-				<td class="offense">Offense</td>
-				<td>1</td>
+				<td class="hero"><a href="Hero.php?hero=Pharah"><img class="icon" src="images/characters/Icons/Pharah.png"/>Pharah</a></td>
+				<td class="offense"><a href="Heroes.php?view=offense">Offense</a></td>
+				<td class="difficulty"><img src="images/characters/1Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="three">Tier 3</td>
-				<td>Tracer</td>
-				<td class="offense">Offense</td>
-				<td>2</td>
+				<td class="hero"><a href="Hero.php?hero=Tracer"><img class="icon" src="images/characters/Icons/Tracer.png"/>Tracer</a></td>
+				<td class="offense"><a href="Heroes.php?view=offense">Offense</a></td>
+				<td class="difficulty"><img src="images/characters/2Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="three">Tier 3</td>
-				<td>Moira</td>
-				<td class="support">Support</td>
-				<td>2</td>
+				<td class="hero"><a href="Hero.php?hero=Moira"><img class="icon" src="images/characters/Icons/Moira.png"/>Moira</a></td>
+				<td class="support"><a href="Heroes.php?view=support">Support</a></td>
+				<td class="difficulty"><img src="images/characters/2Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="three">Tier 3</td>
-				<td>D.Va</td>
-				<td class="tank">Tank</td>
-				<td>2</td>
+				<td class="hero"><a href="Hero.php?hero=D.Va"><img class="icon" src="images/characters/Icons/D.Va.png"/>D.Va</a></td>
+				<td class="tank"><a href="Heroes.php?view=tank">Tank</a></td>
+				<td class="difficulty"><img src="images/characters/2Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="three">Tier 3</td>
-				<td>Reinhardt</td>
-				<td class="tank">Tank</td>
-				<td>1</td>
+				<td class="hero"><a href="Hero.php?hero=Reinhardt"><img class="icon" src="images/characters/Icons/Reinhardt.png"/>Reinhardt</a></td>
+				<td class="tank"><a href="Heroes.php?view=tank">Tank</a></td>
+				<td class="difficulty"><img src="images/characters/1Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="three">Tier 3</td>
-				<td>Roadhog</td>
-				<td class="tank">Tank</td>
-				<td>1</td>
+				<td class="hero"><a href="Hero.php?hero=Roadhog"><img class="icon" src="images/characters/Icons/Roadhog.png"/>Roadhog</a></td>
+				<td class="tank"><a href="Heroes.php?view=tank">Tank</a></td>
+				<td class="difficulty"><img src="images/characters/1Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="three">Tier 3</td>
-				<td>Zarya</td>
-				<td class="tank">Tank</td>
-				<td>3</td>
+				<td class="hero"><a href="Hero.php?hero=Zarya"><img class="icon" src="images/characters/Icons/Zarya.png"/>Zarya</a></td>
+				<td class="tank"><a href="Heroes.php?view=tank">Tank</a></td>
+				<td class="difficulty"><img src="images/characters/3Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="four">Tier 4</td>
-				<td>Mei</td>
-				<td class="defense">Defense</td>
-				<td>3</td>
+				<td class="hero"><a href="Hero.php?hero=Mei"><img class="icon" src="images/characters/Icons/Mei.png"/>Mei</a></td>
+				<td class="defense"><a href="Heroes.php?view=defense">Defense</a></td>
+				<td class="difficulty"><img src="images/characters/3Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="four">Tier 4</td>
-				<td>Orisa</td>
-				<td class="tank">Tank</td>
-				<td>2</td>
+				<td class="hero"><a href="Hero.php?hero=Orisa"><img class="icon" src="images/characters/Icons/Orisa.png"/>Orisa</a></td>
+				<td class="tank"><a href="Heroes.php?view=tank">Tank</a></td>
+				<td class="difficulty"><img src="images/characters/2Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="five">Tier 5</td>
-				<td>Bastion</td>
-				<td class="defense">Defense</td>
-				<td>1</td>
+				<td class="hero"><a href="Hero.php?hero=Bastion"><img class="icon" src="images/characters/Icons/Bastion.png"/>Bastion</a></td>
+				<td class="defense"><a href="Heroes.php?view=defense">Defense</a></td>
+				<td class="difficulty"><img src="images/characters/1Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="five">Tier 5</td>
-				<td>Torbjorn</td>
-				<td class="defense">Defense</td>
-				<td>2</td>
+				<td class="hero"><a href="Hero.php?hero=Torbjorn"><img class="icon" src="images/characters/Icons/Torbjorn.png"/>Torbjorn</a></td>
+				<td class="defense"><a href="Heroes.php?view=defense">Defense</a></td>
+				<td class="difficulty"><img src="images/characters/2Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="five">Tier 5</td>
-				<td>Widowmaker</td>
-				<td class="defense">Defense</td>
-				<td>2</td>
+				<td class="hero"><a href="Hero.php?hero=Widowmaker"><img class="icon" src="images/characters/Icons/Widowmaker.png"/>Widowmaker</a></td>
+				<td class="defense"><a href="Heroes.php?view=defense">Defense</a></td>
+				<td class="difficulty"><img src="images/characters/2Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="five">Tier 5</td>
-				<td>Sombra</td>
-				<td class="offense">Offense</td>
-				<td>3</td>
+				<td class="hero"><a href="Hero.php?hero=Sombra"><img class="icon" src="images/characters/Icons/Sombra.png"/>Sombra</a></td>
+				<td class="offense"><a href="Heroes.php?view=offense">Offense</a></td>
+				<td class="difficulty"><img src="images/characters/3Star.png"/></td>
 			</tr>
 			<tr>
 				<td class="five">Tier 5</td>
-				<td>Symmetra</td>
-				<td class="support">Support</td>
-				<td>2</td>
+				<td class="hero"><a href="Hero.php?hero=Symmetra"><img class="icon" src="images/characters/Icons/Symmetra.png"/>Symmetra</a></td>
+				<td class="support"><a href="Heroes.php?view=support">Support</a></td>
+				<td class="difficulty"><img src="images/characters/2Star.png"/></td>
 			</tr>
 		</table>
 		

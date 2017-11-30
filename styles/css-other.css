@@ -20,7 +20,7 @@ table img{
 	margin: 0 auto;
 }
 table {
-	text-align: center;
+	text-align: left;
 }
 table h2:hover {
 	background-color: orange;

@@ -66,8 +66,25 @@ img.pic {
 	
 	
 }
-
+.offense:hover a {
+	text-decoration: underline;
+}
+.tank:hover a {
+	text-decoration: underline;
+}
+.defense:hover a {
+	text-decoration: underline;
+}
+.support:hover a {
+	text-decoration: underline;
+}
+.hero {
+	vertical-align: middle;
+	text-align: center;
+	line-height: 100px;
+}
 .icon {
+	float: left;
 	vertical-align: middle;
 	padding-right: 1em;
 }
@@ -77,7 +94,9 @@ img.pic {
 	
 	
 }
-
+.difficulty img{
+	zoom: 2;
+}
 .tank {
 	background-color: #560101;
 	

@@ -6,7 +6,7 @@ src: url("http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.wof
 h1 {
 	text-align: center;
 	font-family: Overwatch;
-	font-size: 10em;
+	font-size: 7em;
 	color: #D7D8E7;
 }
 
@@ -21,27 +21,17 @@ h2 {
 .ability-name {
 	font-size: 1.5em;
 	font-family: Overwatch;
-	color: #D7D8E7;
+	color: orange;
+	margin-bottom: 7em;
+	margin-right: 7em;
+	margin-left: 7em;
 }
 
-#roleicon {
-	display: inline;
-	margin: 0 auto;
-	zoom: .5;
-}
+
 .ability-table {
-	margin-right: 7em;
-	margin-top: 2em;
-	margin-bottom: 2em;
-	width: auto;
-	font-family: Overwatch;
-	color: orange;
-	font-size: 2em;
-	border: solid #D7D8E7 0.1em;
-	background-color: rgba(41, 44, 46, 0.5);
-}
-.ability-table tr{
-	text-align: center;
+	text-align:center;
+	margin-left: 2em;
+	margin-right: 2em;
 }
 .abilities th{
 	font-family: Overwatch;
@@ -51,7 +41,7 @@ h2 {
 .abilities td{
 	font-family: Overwatch;
 	color: orange;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 .comment {
@@ -66,7 +56,10 @@ h2 {
 	font-size: 4em;
 	font-family: Overwatch;
 }
-
+.time {
+	font-family: Overwatch;
+	font-size: 1.5em;
+}
 .comment-body {
 	font-size: 3em;
 	font-family: Overwatch;
@@ -75,15 +68,12 @@ h2 {
 
 .comment-section {
 	clear: both;
-	
-	margin-top: 7em;
 }
 
-.portrait {
-	float: left;
-	margin: 0 auto;
-	padding-left: 5em;
-	
+.picture {
+	display: block;
+	width:70%;
+	margin:  auto;
 	
 }
 label {
@@ -110,38 +100,4 @@ input[type="submit"] {
 	padding: .25em;
 }
 
-.portrait-table {
-	text-align: left;
-	float: left;
-	border: solid #D7D8E7 .1em;
-	background-color: rgba(41, 44, 46, 0.5);
-	color: #D7D8E7;
-	font-family: Overwatch;
-	font-size: 2em;
-	margin: 5em;
-}
-#desc {
-	color: orange;
-	border-bottom: solid #D7D8E7 0.1em;
-}
-.portrait-table tr td p {
-	padding-right: .25em;
-}
-figure img {
-	zoom: .75;
-}
-.time {
-	font-family: Overwatch;
-	font-size: 1.5em;
-	
-}
-.portrait-column {
-	text-align: justify;
-	width: 50em;
-}
-
-.portrait-column img {
-	display: block;
-	margin: 0 auto;
-}
 

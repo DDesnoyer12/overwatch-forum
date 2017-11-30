@@ -55,6 +55,14 @@ h1 {
 .roleicon {
 	zoom: 25%;
 }
+.herotype {
+	font-family: Overwatch;
+	font-size: 2em;
+	color: orange;
+	margin-right: 15em;
+	margin-left: 15em;
+	margin-top: 2em;
+}
 #character-div table img{
 	
 	

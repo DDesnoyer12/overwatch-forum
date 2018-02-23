@@ -60,7 +60,7 @@ $map = $_GET['Map'];
 		
 		echo '<div class="comment">';
 		echo '<p class="author">'.$row->Author.'</p>';
-		echo '<p class="time">OPosted on: '.$row->post_time.'</p>';
+		echo '<p class="time">Posted on: '.$row->post_time.'</p>';
 		echo '<p class="comment-body">'.$row->Comment.'</p></div>';
 	
 	}

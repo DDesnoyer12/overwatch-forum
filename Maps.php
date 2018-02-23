@@ -18,7 +18,7 @@ if($_GET) {
 <html>
 <head lang = "en">
 	<meta charset="utf-8">
-	<title>An Overwatch Fan Website</title>
+	<title>Maps</title>
 	<link rel="stylesheet" href="styles/reset.css" />
 	<link rel="stylesheet" href="styles/css-header.css" />
 	<link rel="stylesheet" href="styles/css-maps.css" />

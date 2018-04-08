@@ -61,21 +61,21 @@ img.pic {
 	background-color: #adafa8;
 }
 
-.offense {
+.Offense {
 	background-color: #3ab50e;
 	
 	
 }
-.offense:hover a {
+.Offense:hover a {
 	text-decoration: underline;
 }
-.tank:hover a {
+.Tank:hover a {
 	text-decoration: underline;
 }
-.defense:hover a {
+.Defense:hover a {
 	text-decoration: underline;
 }
-.support:hover a {
+.Support:hover a {
 	text-decoration: underline;
 }
 .hero {
@@ -89,7 +89,7 @@ img.pic {
 	padding-right: 1em;
 }
 
-.defense {
+.Defense {
 	background-color: #06a098;
 	
 	
@@ -97,13 +97,13 @@ img.pic {
 .difficulty img{
 	zoom: 2;
 }
-.tank {
+.Tank {
 	background-color: #560101;
 	
 	
 }
 
-.support {
+.Support {
 	background-color: #ac46ce;
 	
 	

@@ -1,6 +1,6 @@
 <?php 
 define('DBHOST', 'localhost');
-define('DBNAME', 'final_project');
+define('DBNAME', 'overwatch_forum');
 define('DBUSER', 'root');
 define('DBPASS', '');
 $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
@@ -23,6 +23,7 @@ if($_GET) {
 	<link rel="stylesheet" href="styles/css-header.css" />
 	<link rel="stylesheet" href="styles/css-maps.css" />
 	<link rel="icon" href="images/favicon.png" />
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 </head>
 <body>
 <?php include 'includes/final-header.php'; ?>
@@ -70,12 +71,12 @@ if($_GET) {
 							team. Matches are played in several rounds, and players cannot respawn until the next round.</p>";
 						}
 						$var = 0;
-						$sql = "SELECT Map FROM maps WHERE Type = '$view' ORDER BY Map";
+						$sql = "SELECT map_name FROM maps WHERE map_type = '$view' ORDER BY map_name";
 						$results = mysqli_query($connection, $sql);
 						while($map = mysqli_fetch_array($results)) {
 							if($var == 0) { echo '<tr>';}
-							echo '<td><a href = "Map.php?Map='.$map['Map'].'"><p>'.$map['Map'].'</p></a><br/>';
-							echo '<a href = "Map.php?Map='.$map['Map'].'"><img src="images/maps/'.$map['Map'].'.jpg"/></a></td>';
+							echo '<td><a href = "Map.php?Map='.$map['map_name'].'"><p>'.$map['map_name'].'</p></a><br/>';
+							echo '<a href = "Map.php?Map='.$map['map_name'].'"><img src="images/maps/'.$map['map_name'].'.jpg"/></a></td>';
 							$var = $var+1;
 							if($var == 4) {
 								echo '</tr>';
@@ -84,12 +85,12 @@ if($_GET) {
 						}
 					} else {
 						$var = 0;
-						$sql = "SELECT Map FROM maps ORDER BY Map";
+						$sql = "SELECT map_name FROM maps ORDER BY map_name";
 						$results = mysqli_query($connection, $sql);
 						while($map = mysqli_fetch_array($results)) {
 							if($var == 0) { echo '<tr>';}
-							echo '<td><a href = "Map.php?Map='.$map['Map'].'"><p>'.$map['Map'].'</p></a><br/>';
-							echo '<a href = "Map.php?Map='.$map['Map'].'"><img src="images/maps/'.$map['Map'].'.jpg"/></a></td>';
+							echo '<td><a href = "Map.php?Map='.$map['map_name'].'"><p>'.$map['map_name'].'</p></a><br/>';
+							echo '<a href = "Map.php?Map='.$map['map_name'].'"><img src="images/maps/'.$map['map_name'].'.jpg"/></a></td>';
 							$var = $var+1;
 							if($var == 4) {
 								echo '</tr>';

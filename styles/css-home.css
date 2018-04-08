@@ -2,7 +2,9 @@
 font-family: Overwatch; 
 src: url("http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff");
 }
-
+html {
+	background-image:url("../images/background-overwatch-top.jpg");
+}
 h1 {
 	font-family: Overwatch;
 	font-size: 10em;
@@ -37,6 +39,4 @@ h3 {
 img.pic {
 	zoom: 55%;
 	padding-top: 2.5em;
-    display: block;
-    margin: 0 auto;
 }

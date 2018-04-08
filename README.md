@@ -1,11 +1,12 @@
-# CS3500-Final-Project
+# CS4430-Final-Project
 
 Creators: Daniel Desnoyer, Richad Schaefer, & Mathew Schutz
 
-Due Date: 12 December 2017
+Due Date: April 18, 2018
 
-Description: Our final project for this class is an Overwatch Fan Website. 
-Using languages such as HTML5, CSS, and PHP we have made an website for any 
-fan of the game to learn more. Whether they are just starting, and want to learn 
-about each character, or are a seasoned veteran and looking for advanced tactics 
-for gameplay advantages, they will be able to find helpful guides on our site! 
+Description: Our final project for this class is an Overwatch forum/fan website.
+
+Half of the website is a database dedicated to stats and other information on all of Overwatch's
+heroes and maps, including abilities, damage, difficulties, and competitive rankings.
+The other half of the website is a dedicated forum for the game, where users can create an account
+and log on to post topics under various different categories of the game.

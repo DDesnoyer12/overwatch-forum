@@ -1,6 +1,6 @@
 <?php
 define('DBHOST', 'localhost');
-define('DBNAME', 'final_project');
+define('DBNAME', 'overwatch_forum');
 define('DBUSER', 'root');
 define('DBPASS', '');
 $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
@@ -27,25 +27,26 @@ $map = $_GET['Map'];
 <section>
 <?php
 	echo '<h1>' .$map. '</h1>';
-	$maptype = mysqli_fetch_assoc(mysqli_query($connection, "SELECT Type FROM maps WHERE Map ='$map'"));	
-	echo '<h2 style="text-align: center; color:orange">'.$maptype['Type'].' Map</h2>';
+	$maptype = mysqli_fetch_assoc(mysqli_query($connection, "SELECT map_type FROM maps WHERE map_name ='$map'"));	
+	echo '<h2 style="text-align: center; color:orange">'.$maptype['map_type'].' Map</h2>';
 	echo '<img class="picture" src="images/maps/hd/'.$map.'.jpg"/>';
 	echo '<div class="ability-table">';
 	echo '<table class="abilities">';
-			$sql = "SELECT Description FROM maps WHERE Map ='$map'";
+			$sql = "SELECT map_description FROM maps WHERE map_name ='$map'";
 			$results = mysqli_query($connection, $sql);
 			echo '<tr><th>Map Description</th></tr>';
 			while($des = mysqli_fetch_array($results)) {
-			echo '<tr><td><h3 class="ability-name">'.$des['Description'].'</h3></td></tr>';
+			echo '<tr><td><h3 class="ability-name">'.$des['map_description'].'</h3></td></tr>';
 			}
 	echo '</table>';
 	echo'</div>';
 ?>
 </section>
-<section class="comment-section">
+<!--section class="comment-section">
 	<h2>Player opinions on <?php echo $map; ?></h2>
-<?php
-	$result = mysqli_query($connection, "SELECT * FROM comments WHERE PageID = '$map'");
+-->
+	<?php
+/*	$result = mysqli_query($connection, "SELECT * FROM comments WHERE PageID = '$map'");
 	$row = mysqli_fetch_object($result);
 	echo '<div class="comment">';
 	if($row == null) {
@@ -63,8 +64,9 @@ $map = $_GET['Map'];
 		echo '<p class="time">Posted on: '.$row->post_time.'</p>';
 		echo '<p class="comment-body">'.$row->Comment.'</p></div>';
 	
-	}
+	}*/
 ?>
+<!--
 <h2>Share your opinions:</h2>
 <form action="includes/submitcomment.php" method="post" autocomplete="off">
 <p>
@@ -75,11 +77,13 @@ $map = $_GET['Map'];
 	<label>Comment: </label>
 	<textarea name="comment"></textarea>
 </p>
-<?php echo '<input type="hidden" name="postid" value="'.$map.'" />'; ?>
-<input type="submit" />
+-->
+<?php //echo '<input type="hidden" name="postid" value="'.$map.'" />'; ?>
+<!--<input type="submit" />
 </form>
 
 </section>
 
-<?php include 'includes/final-footer.php'; ?>
+<?php// include 'includes/final-footer.php'; ?>
+-->
 </body>

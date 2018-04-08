@@ -5,14 +5,20 @@
 <header>
 		<nav>
 			<ul>
-				<li><img id="logo" src="images/overwatchlogo.png" />
-				<li class="middle"><a href="Home.php">Home</a></li>
-				<li class="middle"><a href="Heroes.php">Heroes</a></li>
-				<li class="middle"><a href="Maps.php">Maps</a></li>
-				<li class="middle"><a href="Tiers.php">Tier List</a></li>
-				<li class="middle"><a href="Forum.php">Forum</a></li>
-				<li class="middle"><a href="Other.php">Other Stuff</a></li>
-				<li class="last">
+				<li><a href="Home.php"><img id="logo" src="images/overwatchlogo.png" /></a></li>
+				
+				<li>
+					<div class="dropdown">
+						<button class="dropbtn">Overwatch</button>
+						<div class="dropdown-content">
+							<a href="Heroes.php">HEROES</a>
+							<a href="Maps.php">Maps</a>
+							<a href="Tiers.php">Tiers Lists</a>
+						</div>
+					</div>
+				</li>
+				<li><a href="Forum.php">Forum</a></li>
+				<li>
 					<div class="dropdown">
 						<button class="dropbtn">Account</button>
 						<div class="dropdown-content">

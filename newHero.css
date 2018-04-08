@@ -1,0 +1,190 @@
+@font-face { 
+font-family: Overwatch; 
+src: url("http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff");
+}
+html {
+	background-color: #1a1a1a;
+}
+
+section {
+	width: 100%;
+	margin: auto;
+	padding: 10px;
+}
+.container {
+	float: left;
+	margin-top: 0em;
+	margin-right: 0em;
+	margin-left: 20em;
+	margin-bottom: 0;
+	border: solid #363636 0.1em;
+}
+.innercontainer {
+	
+	margin-left: 3em;
+	margin-right: 3em;
+}
+.hero-heading {
+	font-size: 3em;
+	font-family: "Open Sans";
+	font-weight: bold;
+	color: white;
+	text-align: center;
+}
+.text-column .wrapper p {
+	font-family: "Open Sans";
+	font-size: 2em;
+	text-align: center;
+	
+}
+.figure-wrapper img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.text-column-stats .wrapper .pstats {
+	font-family: "Open Sans";
+	font-size: 1.5em;
+	text-align: left;
+	border-radius: .25em;
+	margin-top: .5em;
+	margin-bottom: .5em;
+	color: white;
+}
+
+.text-column-stats .wrapper .pstats span {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+
+.text-column-stats .wrapper .sep-line {
+    height: 1px;
+    border-top: 1px solid #EBEBEB;
+    display: block;
+    position: relative;
+    top: 1px;
+    width: 100%;
+}
+
+.bstats {
+	font-family: "Open Sans";
+	color: white;
+	text-align: right;
+	position: relative;
+    font-size: 1.5em;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+.bstats:before, .bstats:after {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 50%;
+    height: 1px;
+    content: '\a0';
+    background-color: #333333;
+}
+.bstats:before {
+    margin-left: -50%;
+    text-align: right;
+}
+.ability-wrapper {
+	.display: flex;
+	flex-direction: row;
+	width: 1000px;
+	height: auto;
+
+}
+.ability-icon {
+	flex-grow: 1;
+	overflow: auto;
+	width: 200px;
+	float: left;
+	vertical-align: middle;
+	margin-top: 4em;
+	margin-bottom: 5em;
+}
+.text-column-ability {
+	flex-grow: 1;
+	overflow: auto;
+	width: 800px;
+	
+}
+.text-column-bio .wrapper p{
+	font-size: 1em;
+	font-family: "Open Sans";
+	color: white;
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+.text-column-ability h3 {
+	color: white;
+	font-family: 'Open Sans';
+	font-size: 1.5em;
+}
+.text-column-ability p {
+	font-family: 'Open Sans';
+	color: white;
+	text-align: left;
+	font-size: 1.25em;
+	margin-left: 2em;
+}
+.text-column-ability strong {
+	color: orange;
+}
+.text-column-ability .aname {
+	
+	color: orange; 
+	font-size: 2em; 
+	margin-right: 2.5em;
+	font-family: "Open Sans";
+	text-align: right;
+	position: relative;
+    font-size: 2em;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+}
+
+.aname:before, .aname:after {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 50%;
+    height: 1px;
+    content: '\a0';
+    background-color: #333333;
+}
+.aname:before {
+    margin-left: -50%;
+    text-align: right;
+}
+.container .innercontainer .ability-wrapper .text-column-ability .ability-description {
+	font-size: 1em; 
+	color: #939393;
+	margin-right: 5em;
+}
+
+.container .innercontainer .text-column-ability .ability-text-wrapper {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-right: 5em;
+}
+
+.abili
+
+
+
+
+
+
+
+
+
+

@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `overwatch_forum`
 --
-
+CREATE DATABASE overwatch_forum;
 -- --------------------------------------------------------
 
 --

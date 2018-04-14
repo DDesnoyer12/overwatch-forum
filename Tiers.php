@@ -9,7 +9,7 @@ if($error != null) {
 $output = "<p>Unable to connect to database</p>" . $error;
 exit($output);
 }
-mysqli_set_charset($con, "utf8");
+mysqli_set_charset($connection, "utf8");
 ?>
 <!DOCTYPE html>
 <html>

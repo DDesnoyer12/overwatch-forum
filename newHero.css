@@ -4,19 +4,26 @@ src: url("http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.wof
 }
 html {
 	background-color: #1a1a1a;
+	
 }
 
 section {
 	width: 100%;
 	margin: auto;
-	padding: 10px;
+	padding-top: 5em;
+	padding-left: 5em
+}
+.master-container {
+	
+	position: relative;
+	
 }
 .container {
 	float: left;
 	margin-top: 0em;
 	margin-right: 0em;
-	margin-left: 20em;
-	margin-bottom: 0;
+	margin-left: 10em;
+	margin-bottom: 20em;
 	border: solid #363636 0.1em;
 }
 .innercontainer {

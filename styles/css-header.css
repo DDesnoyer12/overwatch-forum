@@ -12,11 +12,14 @@ src: url("http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.wof
 
 
 header{
-	padding-bottom: 2.75em;
+	background-color: #1a1a1a;
 	color:white;
 	font-family: 'Overwatch', sans-serif;
 	font-size:1.5em;
 	border-bottom: solid black .25em;
+}
+header:after {
+	margin-top: 5em;
 }
 
 #logo{
@@ -52,9 +55,6 @@ header li {
 	background-color: orange;
 	color: black;
 }
-header li:hover a {
-	color: black;
-}
 
 .last{
 	border-right:none;
@@ -70,18 +70,15 @@ header li:hover a {
 	z-index: 10;
 }
 
+
 .dropdown {
     display: inline-block;
 }
 
-.dropdown:hover .dropbtn {
-	color: black;
-	background-color: orange;
-}
-
 .dropdown-content {
-	color: black;
-	background-color: orange;
+	text-align: left;
+	color: #D7D8E7;
+	background-color: #1a1a1a;
     display: none;
     position: absolute;
     min-width: 160px;
@@ -98,12 +95,18 @@ header li:hover a {
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #D7D8E7; color: black;}
+.dropdown-content a:hover {background-color: #1a1a1a; color: orange;}
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
 .dropdown:hover .dropbtn {
+	background-color: #1a1a1a;
+	color: orange;
+}
+
+#forumlink:hover a{
 	background-color: Transparent;
+	color: orange;
 }

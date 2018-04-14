@@ -27,7 +27,7 @@ if($_GET) {
 <?php include 'includes/final-header.php'; ?>
 <article>
 	<section>
-		<h1>HEROES</h1>
+		<h1 style="color: orange;">HEROES</h1>
 		<div id="character-list">
 			<ul>
 				<li><a <?php if(!$_GET) { echo  'style="color:orange"'; } ?> href="Heroes.php">All</a></li>

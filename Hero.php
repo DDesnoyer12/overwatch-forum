@@ -9,6 +9,8 @@ if($error != null) {
 $output = "<p>Unable to connect to database</p>" . $error;
 exit($output);
 }
+
+mysqli_set_charset($connection, "utf8");
 /*
 $test = "Ammo: 20";
 $split = explode(':', $test);
@@ -34,8 +36,6 @@ $hero = $_GET['hero'];
 <section>
 <?php
 
-	echo '<div class="portrait-column">';
-	echo '<table class="portrait-table">';
 	$info = mysqli_fetch_assoc(mysqli_query($connection, "SELECT * FROM heroes WHERE hero_name='$hero'"));	
 	echo '<div style="width: 350px; height: auto" class="container">
 	<div class="innercontainer">

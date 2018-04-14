@@ -12,11 +12,24 @@
 <h1>My forum</h1>
     <div id="wrapper">
     <div id="menu">
-        <a class="item" href="/forum/index.php">Home</a> -
-        <a class="item" href="/forum/create_topic.php">Create a topic</a> -
-        <a class="item" href="/forum/create_cat.php">Create a category</a>
-         
+        <a class="item" href="index.php">Home</a> -
+        <a class="item" href="create_topic.php">Create a topic</a> -
+        <a class="item" href="create_cat.php">Create a category</a> -
+        <a class="item" href="signup.php">Sign Up</a> -
+		<a class="item" href="signin.php">Sign In</a>
         <div id="userbar">
-        <div id="userbar">Hello Example. Not you? Log out.</div>
+		<?php
+		SESSION_START();
+echo '<div id="userbar">';
+	if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true)
+    {
+        echo 'Hello ' . $_SESSION['user_name'] . '. Not you? <a href="signout.php">Sign out</a>';
+    }
+    else
+    {
+        echo '<a href="signin.php">Sign in</a> or <a href="sign up">create an account</a>.';
+    }
+	?>
+</div>
     </div>
         <div id="content">

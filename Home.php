@@ -13,9 +13,10 @@
 ?>
 <section>
 	<div>
-		<img  style="margin-top: 3.5em; margin-right: 24.075em;" id="home-logo" src="images/overwatch-home-logo.png" />
+		<img  style="margin-top: 3.5em;" id="home-logo" src="images/overwatch-home-logo.png" />
 		
 		<br />
+		<h1>Welcome to the Overwatch Forum!</h1>
 		<h3>
 		"Never accept the world as it appears to be, dare to see it for what it could be." -Dr. Harold Winston
 		</h3>

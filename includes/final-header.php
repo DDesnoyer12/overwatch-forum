@@ -18,7 +18,7 @@
 						</div>
 					</div>
 				</li>
-				<li id="forumlink"><a href="Forum.php">Forums</a></li>
+				<li id="forumlink"><a href="/cs3500/CS3500-Final-Project/forum/index.php">Forums</a></li>
 				<!--
 				<li>
 					<div class="dropdown">

@@ -1,6 +1,6 @@
 <?php 
 define('DBHOST', 'localhost');
-define('DBNAME', 'final_project');
+define('DBNAME', 'overwatch_forum');
 define('DBUSER', 'root');
 define('DBPASS', '');
 $connection = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
@@ -43,12 +43,12 @@ if($_GET) {
 					if(isset($view)) {
 						
 						$var = 0;
-						$sql = "SELECT Hero FROM heroes WHERE Role = '$view' ORDER BY Hero";
+						$sql = "SELECT hero_name FROM heroes WHERE hero_class = '$view' ORDER BY hero_name";
 						$results = mysqli_query($connection, $sql);
 						while($hero = mysqli_fetch_array($results)) {
 							if($var == 0) { echo '<tr>';}
-							echo '<td><a href = "Hero.php?hero='.$hero['Hero'].'"><img class="render" src="images/characters/Renders/'.$hero['Hero'].'.png"/></a>';
-							echo '<a href="Hero.php?hero='.$hero['Hero'].'" ><p>'.$hero['Hero'].'</p></a><br/></td>';
+							echo '<td><a href = "Hero.php?hero='.$hero['hero_name'].'"><img class="render" src="images/characters/Renders/'.$hero['hero_name'].'.png"/></a>';
+							echo '<a href="Hero.php?hero='.$hero['hero_name'].'" ><p>'.$hero['hero_name'].'</p></a><br/></td>';
 							$var = $var+1;
 							
 							if($view == "offense" | $view == "support") {
@@ -64,12 +64,12 @@ if($_GET) {
 						}
 					} else {
 						$var = 0;
-						$sql = "SELECT Hero FROM heroes ORDER BY Hero";
+						$sql = "SELECT hero_name FROM heroes ORDER BY hero_name";
 						$results = mysqli_query($connection, $sql);
 						while($hero = mysqli_fetch_array($results)) {
 							if($var == 0) { echo '<tr>';}
-							echo '<td><a href = "Hero.php?hero='.$hero['Hero'].'"><img style="zoom: 1" src="images/characters/Renders/'.$hero['Hero'].'.png"/></a>';
-							echo '<a href="Hero.php?hero='.$hero['Hero'].'" ><p>'.$hero['Hero'].'</p></a><br/></td>';
+							echo '<td><a href = "Hero.php?hero='.$hero['hero_name'].'"><img style="zoom: 1" src="images/characters/Renders/'.$hero['hero_name'].'.png"/></a>';
+							echo '<a href="Hero.php?hero='.$hero['hero_name'].'" ><p>'.$hero['hero_name'].'</p></a><br/></td>';
 							$var = $var+1;
 							if($var == 6) {
 								echo '</tr>';

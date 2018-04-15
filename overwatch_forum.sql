@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2018 at 11:48 PM
+-- Generation Time: Apr 16, 2018 at 12:41 AM
 -- Server version: 10.1.26-MariaDB
--- PHP Version: 7.1.8
+-- PHP Version: 7.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `overwatch_forum`
 --
-CREATE DATABASE overwatch_forum;
+
 -- --------------------------------------------------------
 
 --
@@ -117,7 +117,84 @@ INSERT INTO `abilities` (`ability_id`, `ability_hero`, `ability_name`, `ability_
 (66, 12, 'Caduceus Blaster', 'Mercy shoots a round from her sidearm. It\'s best reserved for emergency personal defense.\r\n\r\n', 'Ammo: 20 rounds per clip\r\n', 'Reload Time: 1 second\r\n', 'Damage: 20\r\n', 'Fire Rate: 5 shots per second\r\n', 'Projectile Speed: 40 (80) m/s\r\n', 'Headshots: Yes', NULL, NULL, NULL, NULL),
 (67, 12, 'Guardian Angel', 'Mercy flies towards a targeted ally, allowing her to reach them quickly and provide assistance in crucial moments.\r\n\r\n', 'Range: 30 meters\r\n', 'Cooldown: 1.5 seconds\r\n\r\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (68, 12, 'Resurrect', 'Mercy radiates restorative power, bringing nearby dead allies back into the fight with full health.\r\n\r\n', 'Range: 5m', 'Movement Speed: 1.375 m/s\r\n', 'Cast Time: 1.75 sec\r\n', 'Duration: 2.25 seconds\r\n', 'Cooldown: 30-seconds\r\n\r\n', NULL, NULL, NULL, NULL, NULL),
-(69, 12, 'Valkyrie (Ultimate)', 'Valkyrie unleashes the full power of Mercy\'s Valkyrie Suit, enhancing her weapons and abilities for 20 seconds.\r\n\r\n', 'Movement Speed: 9 m/s', 'Duration: 20 seconds', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(69, 12, 'Valkyrie (Ultimate)', 'Valkyrie unleashes the full power of Mercy\'s Valkyrie Suit, enhancing her weapons and abilities for 20 seconds.\r\n\r\n', 'Movement Speed: 9 m/s', 'Duration: 20 seconds', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(70, 13, 'Biotic Grasp', 'Using her left hand, Moira expends biotic energy to heal allies in front of her. Her right hand fires a long-range beam weapon that saps enemies’ health, healing Moira and replenishing her biotic energy.', 'Primary fire: Regeneration', 'Secondary fire: Decay', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(71, 13, 'Fade', 'Disappear, move faster, and become invulnerable, but you cannot shoot.', 'Movement Speed:   18.75 m/s', 'Duration: Lasts 0.8 seconds', 'Cooldown: 6-seconds', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(72, 13, 'Biotic Orb', 'Moira launches a rebounding biotic sphere; she can choose between a regeneration effect that heals the allies it passes through, or a decay effect that deals damage to enemies.', 'Damage Rate:   50 per second', 'Max Damage: 200', 'Healing Rate: 75 per second', 'Max Healing: 300', 'Projectile Speed: 20 (5.5) m/s', 'Cooldown: 10-seconds', NULL, NULL, NULL, NULL),
+(73, 13, 'Coalescence (Ultimate Ability)', 'Damage Rate:    70 per second', 'Range: 30 m', 'Healing Rate: 140 per second', 'Movement Speed: 9 m/s', 'Cast Time: 0.5 sec', 'Duration: Lasts 8 seconds', 'Headshot: No', NULL, NULL, NULL, NULL),
+(74, 14, 'Fusion Driver', 'Orisa’s automatic projectile cannon delivers sustained damage, but slows her movement while she fires it.', 'Ammo:   150 rounds per clip', 'Reload Time: 2.66-second', 'Damage:  11', 'Fire Rate:  12.5 rounds per sec', 'Projectile Speed:  72 m/s', 'Movement Speed:  2.75 m/s movement speed', 'Headshot: Yes', NULL, NULL, NULL),
+(75, 14, 'Halt!', 'Orisa launches a graviton charge which she can detonate, slowing nearby enemies and pulling them towards the explosion.', 'Projectile Speed:    20 m/s', 'Radius: 7.5 m radius', 'Cast Time: 0.33 seconds', 'Duration: Lasts 0.45 seconds', 'Cooldown: 8-seconds', NULL, NULL, NULL, NULL, NULL),
+(76, 14, 'Fortify', 'Orisa temporarily reduces damage she takes, and cannot be affected by action-impairing effects.', 'Buff: +50% damage resistance', 'Duration: Lasts 4 seconds', 'Cooldown: 10-seconds', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(77, 14, 'Protective Barrier', 'Orisa throws out a stationary barrier that can protect her and her allies from enemy fire.', 'Barrier HP:   900', 'Projectile Speed: 19 m/s', 'Duration: Lasts 20 seconds', 'Cooldown: 8-seconds', NULL, NULL, NULL, NULL, NULL, NULL),
+(78, 14, 'Supercharger (Ultimate Ability)', 'Orisa deploys a device to increase damage by 50% inflicted by allies within its line of sight.', 'Damage Buff: +50% damage dealt', 'Radius: 25 m radius', 'Cast Time: 1 sec cast', 'Duration: Lasts 16 seconds', NULL, NULL, NULL, NULL, NULL, NULL),
+(79, 15, 'Hover Jets', 'Pharah hovers in mid-air.', 'Recharge Time:  2 seconds', 'Movement Speed: 5.5 m/s', 'Duration: 2 seconds or until stopped', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(80, 15, 'Rocket Launcher', 'Pharah’s primary weapon launches rockets that deal significant damage in a wide blast radius.', 'Ammo:  6 rounds per clip', 'Reload Time:  1-second', 'Damage:  120 direct hit; 20 – 80 splash damage; 10 – 40 splash self damage', 'Radius:  3 m splash', 'Fire Rate:  1.11 shots per second', 'Projectile Speed:  28.5 m/s', 'Headshot: No; Can inflict self damage; Can inflict self knockback', NULL, NULL, NULL),
+(81, 15, 'Concussive Blast', 'Pharah looses a wrist rocket that knocks back any enemies it strikes.', 'Radius:  8 m splash', 'Projectile Speed: 57 m/s', 'Cooldown: 12-seconds', 'Headshot: No', NULL, NULL, NULL, NULL, NULL, NULL),
+(82, 15, 'Jump Jet', 'Propelled by her suit’s thrusters, Pharah soars high into the air.', 'Range:  ~25 m', 'Movement Speed:  ~20 m/s', 'Cooldown:  10-seconds', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(83, 15, 'Barrage (Ultimate Ability)', 'Pharah directs a continuous salvo of mini-rockets to destroy groups of enemies.', 'Fire Rate:   30 rockets per second', 'Damage: 40 per rocket', 'Max Damage: Max 3600 per use', 'Projectile Speed: 28.5 m/s', 'Duration: 3 seconds', 'Headshot: No', NULL, NULL, NULL, NULL),
+(84, 16, 'The Reaping (Passive)', 'Reaper steals health from his enemies as he damages them.', 'Effect:  20% of damage done restored as HP', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(85, 16, 'Hellfire Shotguns', 'Reaper can collect Soul Globes to regain health.', 'Ammo:  8 rounds per clip', 'Reload TIme:  1.5-seconds', 'Damage:  2 – 7 per pellet', 'Projectiles:   20 pellets per shot', 'Max Damage:  140 bodyshot damage', 'Range:  11 – 20 m', 'Fire Rate:  2 shots per second', 'Headshot: Yes', NULL, NULL),
+(86, 16, 'Wraith Form', 'Reaper becomes a shadow for a short period of time. While in this form, he takes no damage and is able to pass through enemies, but cannot fire his weapons or use other abilities.', 'Movement Speed:   7.1 m/s', 'Duration: 3 seconds', 'Cooldown: 8-seconds', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(87, 16, 'Shadow Step', 'After marking a destination, Reaper disappears and reappears at that location.', 'Range:  35 m', 'Duration:  Lasts 2 seconds', 'Cooldown:  10-seconds', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(88, 16, 'Death Blossom (Ultimate)', 'In a blur of motion, Reaper empties both Hellfire Shotguns at breakneck speed, dealing massive damage to all nearby enemies.', 'Damage Rate:   170 damage per sec', 'Max Damage:  510 per enemy', 'Radius: 8 m', 'Movement Speed: 3 m/s', 'Duration: 3 seconds', 'Headshot: No', NULL, NULL, NULL, NULL),
+(89, 17, 'Rocket Hammer', 'Reinhardt’s Rocket Hammer is an exemplary melee weapon, able to deal punishing damage in a wide arc with every swing.', 'Ammo: Unlimited rounds per clip', 'Damage:  75', 'Fire Rate:  1.1 swings per sec', 'Range:  5 m range', NULL, NULL, NULL, NULL, NULL, NULL),
+(90, 17, 'Barrier Field', 'Reinhardt projects a broad, forward-facing energy barrier, which can absorb substantial damage before it is destroyed. Though Reinhardt can protect himself and his companions behind the barrier, he cannot attack while sustaining it.', 'Shield Health:    2000 barrier HP', 'Shield Health Regen: 200 barrier HP per sec', 'Movement Speed: 2.75 m/s', 'Cooldown: 0 or 5-second', NULL, NULL, NULL, NULL, NULL, NULL),
+(91, 17, 'Charge', 'Reinhardt charges forth in a straight line, pinning the first enemy in his path and knocking others aside. If he collides with a wall, the foe he’s carrying suffers extreme damage.', 'Damage:   0, 50 or 300', 'Range: 55 m', 'Movement Speed: 16.66 m/s', 'Cooldown: 10-seconds', NULL, NULL, NULL, NULL, NULL, NULL),
+(92, 17, 'Fire Strike', 'By whipping his Rocket Hammer forward, Reinhardt slings a flaming projectile which pierces and damages any enemies it touches.', 'Damage:   100', 'Projectile Speed:  26.66 m/s', 'Cooldown: 6-seconds', 'Headshot: No', NULL, NULL, NULL, NULL, NULL, NULL),
+(93, 17, 'Earthshatter (Ultimate)', 'Reinhardt forcefully slams his Rocket Hammer into the ground, knocking down and damaging all enemies in front of him.', 'Damage:   50 per enemy', 'Range: 2 m, 20 m', 'Duration: 2.5 seconds', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(94, 18, 'Scrap Gun Blast', 'Roadhog’s Scrap Gun fires short-range blasts of shrapnel with a wide spread.', 'Ammo:   5 rounds per clip', 'Reload time:   1.5 seconds', 'Damage: 1.3 – 6 per fragment', 'Projectiles: 25 fragments per shot', 'Max Damage:  150 bodyshot', 'Falloff:  11 – 20 m', 'Fire Rate:  1.3 shots per second', 'Projectile Speed:  57 m/s', 'Headshot: Yes', NULL),
+(95, 18, 'Shrapnel Ball (Alternate Fire)', 'Alternatively, it can launch a shrapnel ball that detonates farther away, scattering metal fragments from the point of impact.', 'Ammo:   5 rounds per clip', 'Reload time:   1.5 seconds', 'Damage: 50;  1.3 – 6 per fragment', 'Projectiles:  25 fragments per shot', 'Max Damage:  150 bodyshot', 'Falloff: 20 – 29 m', 'Fire Rate: 1.3 shots per second', 'Projectile Speed: 57 m/s', 'Range: 9 m', 'Headshot: Yes'),
+(96, 18, 'Chain Hook', 'Roadhog hurls his chain at a target; if it catches, he yanks them into close range.', 'Damage:   30', 'Projectile Speed:  40 m/s', 'Range:  20 m', 'Cooldown:  8-second', 'Headshot: No', NULL, NULL, NULL, NULL, NULL),
+(97, 18, 'Take A Breather', 'Roadhog restores a chunk of his health over a brief period of time.', 'Healing Rate:  300 healing per second on self', 'Damage Resistance: +50%', 'Cast Time: 0.6 seconds; 0.4 seconds recovery', 'Duration: 1 second (healing), 2 seconds (total)', 'Cooldown: 8-seconds', NULL, NULL, NULL, NULL, NULL),
+(98, 18, 'Whole Hog (Ultimate)', 'After cramming a top-loader onto his Scrap Gun, Roadhog pours in ammo. For a short time, he can crank out a stream of shrapnel that knocks back enemies.', 'Damage:  109.5 per shot', 'Max Damage:  4928 bodyshot per use', 'Movement Speed: 2.5 m/s', 'Cast Time: 0.5 sec', 'Duration: 6 seconds', 'Headshot: Yes', NULL, NULL, NULL, NULL),
+(99, 19, 'Heavy Pulse Rifle', 'Soldier: 76’s rifle remains particularly steady while unloading fully-automatic pulse fire.', 'Ammo:   25 rounds per clip', 'Reload Time:  1.5-second', 'Damage:  5 – 19', 'Falloff:  30 – 55 m', 'Fire Rate:  8.66 shots per second', 'Headshot: Yes', NULL, NULL, NULL, NULL),
+(100, 19, 'Helix Rockets', 'Tiny rockets spiral out of Soldier: 76’s Pulse Rifle in a single burst. The rockets’ explosion damages enemies in a small radius.', 'Damage:    120', 'Splash Damage:  80; 40 splash self damage', 'Radius:   2 m', 'Projectile Speed:  40 m/s', 'Cooldown:  8-second', 'Headshot: No', NULL, NULL, NULL, NULL),
+(101, 19, 'Sprint', 'Whether he needs to evade a firefight or get back into one, Soldier: 76 can rush ahead in a burst of speed. His sprint ends if he takes an action other than charging forward.', 'Movement Speed:   8.33 m/s', 'Duration: Lasts until stopped', 'Cooldown: 0-second', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(102, 19, 'Biotic Field', 'Soldier: 76 plants a biotic emitter on the ground. Its energy projection restores health to 76 and any of his squadmates within the field.', 'Heal Rate:   40 HP per second', 'Radius: 5 m', 'Duration: 5 seconds', 'Cooldown: 15-seconds', NULL, NULL, NULL, NULL, NULL, NULL),
+(103, 19, 'Tactical Visor (Ultimate Ability)', 'Soldier: 76’s pinpoint targeting visor “locks” his aim on the threat closest to his crosshairs. If an enemy leaves his line of sight, Soldier: 76 can quickly switch to another target.', 'Duration:   Lasts 6 seconds', 'Reload Time:  0.75 sec', 'Headshot: No', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(104, 20, 'Opportunist (Passive)', 'Sombra detects critically injured enemies through walls. This effect becomes active on an enemy if they fall below half health.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(105, 20, 'Machine Pistol', 'Sombra’s fully-automatic machine pistol fires in a short-range spread.', 'Ammo:   60 rounds per clip', 'Reload Time: 1.5-second reload', 'Damage: 2.4 – 8 damage', 'Faloff Damange: 15 – 25 m falloff range', 'Fire Rate: 20 shots per second', 'Headshot: Yes', NULL, NULL, NULL, NULL),
+(106, 20, 'Hack', 'Sombra hacks enemies to temporarily stop them from using their abilities, or hacks first aid kits to spawn faster and make them useless to her opponents. Taking damage interrupts the hacking.', 'Range:   15 m', 'Cast Time:  0.8 seconds', 'Duration:  Lasts 6, 20, 10, or 60 seconds', 'Cooldown:  8-seconds', NULL, NULL, NULL, NULL, NULL, NULL),
+(107, 20, 'Stealth', 'Sombra becomes invisible for a short period of time, during which her speed is boosted considerably. Attacking, using offensive abilities, or taking damage disables her camouflage.', 'Movement Speed:   8.8 m/s', 'Cast Time: 0.7 seconds cloaking/uncloaking', 'Duration: 6 seconds or until interrupted', 'Cooldown: 6-second', NULL, NULL, NULL, NULL, NULL, NULL),
+(108, 20, 'Translocator', 'Sombra tosses out a translocator beacon. She can instantly return to the beacon’s location while it is active you can only have one beacon at a time. (including when it’s in mid-flight).', 'Projectile Speed: 19 m/s', 'Cast Time: ~0.7 seconds', 'Duration: 15 seconds or until used/replaced', 'Cooldown: 4-second cooldown', NULL, NULL, NULL, NULL, NULL, NULL),
+(109, 20, 'EMP (Ultimate Ability)', 'Sombra discharges electromagnetic energy in a wide radius, destroying enemy barriers and shields and hacking all opponents caught in the blast.', 'Damage Radius:    15 m radius', 'Cast Time: 0.5 sec', 'Duration: Lasts 6 seconds', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(110, 21, 'Photon Beam', 'Symmetra’s weapon emits a short-range beam that homes in on a nearby enemy, dealing continuous damage that increases the longer it is connected.', 'Ammo:   100 rounds per clip', 'Reload time:   1.8 second', 'Damage: 7.5/15/30 per hit', 'Damage Rate: 30/60/120 per second', 'Hit Rate: 4 hits per second', 'Fire Rate: 7 rounds per second', 'Range: 7 or 9.5 m', 'Headshot: No', NULL, NULL),
+(111, 21, 'Energy Ball (Alternate Fire)', 'The projector can also release a charged energy ball that deals high damage.', 'Ammo:   100 rounds per clip', 'Reload time:   1.8 second', 'Damage: 25 – 125 damage', 'Fire Rate: 0.44 – 1.54 shots per second', 'Projectiles: 4 – 20 rounds per shot', 'Projectile Speed: 10 m/s', 'Headshot: No', NULL, NULL, NULL),
+(112, 21, 'Sentry Turret', 'Symmetra sets up a small turret that automatically fires speed-reducing blasts at the nearest enemy within range. Several turrets can be built on the battlefield at once.', 'Turrets Storage:   6', 'Max Turrets on Field: 6', 'Cast Time: 1.5 seconds', 'Cooldown: 10-seconds', 'Turret Health: 1 HP', 'Turret Damage Rate: 30 or 25.5 per second', 'Movement Speed: -20%', 'Range: 10 m range', 'Duration: Lasts until destroyed or replaced', 'Headshot: No'),
+(113, 21, 'Photon Barrier', 'Symmetra projects a moving barrier that absorbs damage as it travels forward.', 'Shield:   1000 barrier HP', 'Projectile Speed: 5.5 m/s', 'Duration: Lasts until destroyed', 'Cooldown: 10-second', NULL, NULL, NULL, NULL, NULL, NULL),
+(114, 21, 'Teleporter (Ultimate)', 'Symmetra places a teleporter exit pad at her current location, and connects it to a teleporter entry pad at her team’s starting point. Allies can travel through the entry pad to the exit pad instantly, enabling them to return to the fight swiftly after being defeated.', 'Duration:   Lasts until destroyed or depleted of charges', 'Number of uses:   6 charges', 'Cast time:   2 seconds', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(115, 21, 'Shield Generator (Ultimate)', 'Symmetra deploys a wide-radius generator that provides increased shielding to her entire team.', 'Radius:  50 m', 'Buff: +75 shields', 'Cast Time: 2 sec', 'Duration: Lasts until destroyed, 5 sec', NULL, NULL, NULL, NULL, NULL, NULL),
+(116, 22, 'Scrap Collector (Passive)', 'Torbjörn can collect scrap from enemies or allies that die on the battlefield.', 'Ability:  +2 scrap per second, +15 scrap per pickup; Max 200 scrap', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(117, 22, 'Rivet Gun Shot', 'Torbjörn fires rivets at long range', 'Ammo:   18 rounds per clip', 'Reload time:   2 seconds', 'Damage: 70 per shot', 'Fire Rate: 1.67 shot per second', 'Projectiles: 1 round per shot', 'Projectile Speed: ~55 m/s', 'Headshot: Yes', NULL, NULL, NULL),
+(118, 22, 'Rivet Gun Burst (Alternate Fire)', 'Torbjörn ejects molten metal from his gun in a short, close-range burst.', 'Ammo:   18  rounds per clip', 'Reload time:   2 seconds', 'Damage: 6 – 15 per pellet', 'Projectiles: 10 pellets per shot', 'Max Damage:  150 bodyshot', 'Falloff: 7 – 20 m', 'Fire Rate: 1.25 shots per second\r\n3 rounds per shot', 'Projectile Speed: ~80 m/s', 'Headshot: Yes', NULL),
+(119, 22, 'Forge Hammer (Alternate Weapon)', 'Torbjörn uses his multipurpose hammer to build, upgrade and repair turrets. In a pinch, it can also be swung as a weapon.', 'Damage: 55 per swing', 'Healing: 50 per swing', 'Fire Rate: 1.25 swings per second', 'Headshot: No', NULL, NULL, NULL, NULL, NULL, NULL),
+(120, 22, 'Build Turret', 'Torbjörn constructs an enemy-tracking autocannon. He can use his Forge Hammer to repair or upgrade it, increasing its health and adding a second cannon barrel and a rocket launcher.', 'Deploy Time:  3 seconds', 'Cooldown: 8-seconds', 'Turret Health: 150, 300, or 800 HP', 'Turret Damage: 14 per rounds, 14 per rocket', 'Turret Fire Rate: 2, 4, 5 rounds per second; 4 rockets per second', 'Turret Range: 40 m', 'Turret Ammo: ∞', 'Duration: Lasts until destroyed or replaced', 'Headshot: No', NULL),
+(121, 22, 'Armor Pack', 'Torbjörn deploys an armor upgrade; either he or his allies can pick it up to absorb some damage.', 'Armor:   +75 temporary per pack', 'Scrap: 50 per pack', 'Cooldown: 0-second cooldown', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(122, 22, 'Molten Core (Ultimate)', 'After overheating his personal forge, Torbjörn gains a significant amount of armor and scrap. He also attacks (and builds and repairs turrets) far faster than normal.', 'Attack Speed::   +50% attack speed', 'Armor: +300', 'Duration: 12 seconds', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(123, 23, 'Pulse Pistols', 'Tracer rapid-fires both of her pistols.', 'Ammo:  40 rounds per clip', 'Reload Time: 1-second', 'Damage: 1.5 – 6 per round', 'Projectiles:  2 rounds per shot', 'Max Damage:  12 bodyshot', 'Falloff: 11 – 30 m', 'Fire Rate: 20 shots per second', 'Headshot: Yes', NULL, NULL),
+(124, 23, 'Blink', 'Tracer zips horizontally through space in the direction she’s moving, and reappears several yards away. She stores up to three charges of the blink ability and generates more every few seconds.', 'Charges:   3', 'Range: 7.8 m', 'Cooldown: 3-second', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(125, 23, 'Recall', 'Tracer bounds backward in time, returning her health, ammo and position on the map to precisely where they were a few seconds before.', 'Duration:   1.25 seconds', 'Cooldown:   12 seconds', 'Ability:   Returns health lost during the last 3 seconds', 'Ability:   Returns you to position from 3 seconds ago', NULL, NULL, NULL, NULL, NULL, NULL),
+(126, 23, 'Pulse Bomb (Ultimate)', 'Tracer lobs a large bomb that adheres to any surface or unfortunate opponent it lands on. After a brief delay, the bomb explodes, dealing high damage to all enemies within its blast radius.', 'Damage:   400', 'Radius: 3 m', 'Duration: 1 second', 'Headshot: No', NULL, NULL, NULL, NULL, NULL, NULL),
+(127, 24, 'Widow’s Kiss (Automatic)', 'Widowmaker’s rifle can be shot in fully-automatic mode allowing her to effectively shoot targets from close to medium range.', 'Ammo:   30 rounds per clip', 'Reload time:   1.5 seconds', 'Damage: 13 per shot', 'Fire Rate: 10 shots per second\r\n1 round per shot', 'Headshot: Yes', NULL, NULL, NULL, NULL, NULL),
+(128, 24, 'Widow’s Kiss (Scoped, Alternate fire)', 'Widowmaker’s versatile sniper rifle is ideal for scope-aimed shots at distant targets.', 'Ammo:   30 rounds per clip', 'Reload time:   1.5 seconds', 'Movement Speed: 1.9 m/s', 'Damage: 12 – 120', 'Fire Rate: 1 uncharged shot per 0.45 seconds – 1 fully charged shot per 1.2 seconds - 3 rounds per shot', 'Charge Time: 0.75 second charging, 0.45 second buffer, 0.33 second scope in/out', 'Headshot: Yes', NULL, NULL, NULL),
+(129, 24, 'Grappling Hook', 'Widowmaker launches a grappling hook towards the location she’s aiming at – when the hook connects with a scalable surface, she’s quickly drawn towards it, allowing her to expand her view of the battlefield and evade or flank targets.', 'Projectile Speed:    20 m/s', 'Range: 20 m', 'Movement Speed: 16 m/s', 'Cooldown: 8-seconds', NULL, NULL, NULL, NULL, NULL, NULL),
+(130, 24, 'Venom Mine', 'Widowmaker adheres a swiftly-arming venom mine to nearly any surface. When a target wanders within range of the mine’s motion trigger, it explodes, delivering poison gas to any enemies in the vicinity.', 'Damage:   15 per second', 'Max Damage:  75 total\r\n5 HP', 'Projectile Speed: 19 m/s', 'Radius: 3 m', 'Duration: Lasts until destroyed, 5 seconds', 'Cooldown: 15-second cooldown', NULL, NULL, NULL, NULL),
+(131, 24, 'Infra-Sight (Ultimate)', 'Widowmaker’s recon visor allows her to see the heat signatures of her targets through walls and objects for a moderate amount of time. This enhanced vision is shared with her allies.', 'Cast Time:   0.5 sec cast', 'Duration: 15.5 seconds', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(132, 25, 'Tesla Cannon', 'Winston’s weapon fires a short-range electric barrage for as long as he holds down the trigger.', 'Ammo:   100 rounds per clip', 'Reload Time: 1.5-second', 'Damage: 3 per round', 'Damage Rate:  60 damage per second', 'Fire Rate: 20 rounds per second', 'Range: 8 m', 'Radius: 6 m', 'Headshot: No', NULL, NULL),
+(133, 25, 'Jump Pack', 'Assisted by his energy pack, Winston lunges through the air, dealing significant damage and staggering nearby enemies when he lands.', 'Splash damage:   1 and 45 – 1 damage', 'Range: 20 m', 'Radius: 5 m', 'Cooldown: 6 or 2-second', NULL, NULL, NULL, NULL, NULL, NULL),
+(134, 25, 'Barrier Projector', 'Winston’s barrier projector extends a bubble-shaped field that absorbs damage until it’s destroyed. Allies protected by the barrier can return fire from within it.', 'Barrier:  600 HP', 'Radius: 5 m', 'Duration: 5 seconds or until destroyed', 'Cooldown: 13-second', NULL, NULL, NULL, NULL, NULL, NULL),
+(135, 25, 'Primal Rage (Ultimate)', 'Winston embraces his animal nature, significantly boosting his health and making him very difficult to kill, strengthening his melee attack, and allowing him to use his Jump Pack ability more frequently. While raging, Winston can only make melee and Jump Pack attacks.', 'Health Buff:  +500 maximum health; health and armor fully replenished', 'Melee Rate: 1.55 swings per second', 'Damage: 40 per swing', 'Range: 4 m', 'Movement Speed: 7.15 m/s', 'Duration: Lasts 10 seconds', NULL, NULL, NULL, NULL),
+(136, 26, 'Energy (Passive)', 'Damage blocked increases Particle Cannon damage.', 'Particle Cannon Damage:  +1% per point; Max +100% Particle Cannon damage\r\n+1 Energy per 5 barrier HP damage; -2 Energy per sec', 'Buffer: 2 sec decay', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(137, 26, 'Particle Energy Beam', 'Zarya’s mighty Particle Cannon unleashes a short-range beam of destructive energy.', 'Ammo:   100 rounds per clip', 'Reload time:   1.5 seconds', 'Damage: 4.75 – 9.5 per round', 'Damage Rate: 95 – 190 per second', 'Fire Rate: 20 rounds per second', 'Projectiles: 1 round per shot', 'Range: 15 m', 'Headshot: No', NULL, NULL),
+(138, 26, 'Particle Explosive Charge (Alternate fire)', 'Alternatively, Zarya can lob an explosive charge to strike multiple opponents.', 'Ammo:   100 rounds per clip', 'Reload time:   1.5 seconds', 'Damage: 46 – 92 per shot', 'Splash Damage: 45 – 90 splash; 23.5 – 47 splash self damage', 'Radius: 2 – 3 m', 'Fire Rate: 1 shot per second', 'Projectiles: 25 rounds per shot', 'Projectile Speed: 23.5 m/s projectile speed', 'Headshot: No', NULL),
+(139, 26, 'Particle Barrier', 'The Particle Cannon can emit a personal barrier that shields Zarya against incoming attacks, redirecting their energy to enhance her weapon’s damage and the width of its beam.', 'Barrier Health:   200', 'Duration: 2 seconds or until destroyed', 'Cooldown: 10-second', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(140, 26, 'Projected Barrier', 'Zarya surrounds one of her teammates with an energy barrier that simultaneously absorbs fire and boosts the power of her Particle Cannon.', 'Barrier Health:   200', 'Range: 30 m', 'Duration: 2 seconds', 'Cooldown: 8-second', NULL, NULL, NULL, NULL, NULL, NULL),
+(141, 26, 'Graviton Surge (Ultimate)', 'Zarya launches a gravity bomb that draws in enemy combatants and deals damage while they’re trapped.', 'Damage Rate:   5.5 per sec', 'Max Damage:  22 damage per enemy', 'Radius: 8 m', 'Duration: 4 seconds', 'Headshot: No', NULL, NULL, NULL, NULL, NULL),
+(142, 27, 'Orb of Destruction (Singular Orb)', 'Zenyatta projects his destructive energy orbs individually.', 'Ammo:  20 rounds per clip', 'Reload time:  2 seconds', 'Damage: 46', 'Fire Rate: 2.5 shots per second', 'Projectile Speed: 60 m/s projectile speed', 'Headshot: Yes', NULL, NULL, NULL, NULL),
+(143, 27, 'Orb of Destruction (Orb Volley)', 'Zenyatta projects his destructive energy orbs in a rapid-fire volley after a few seconds spent gathering power.', 'Ammo:  20 rounds per clip', 'Reload time:  2 seconds', 'Damage: 46 per orb', 'Projectiles: 1 – 5 orbs per shot', 'Max Damage: 230 bodyshot', 'Fire Rate: 5 orbs in 0.4 seconds\r\n1 – 5 rounds per burst', 'Projectile Speed: 60 m/s\r\n0.4 – 2 and up to 3 seconds charging, 0.6 seconds buffer', 'Headshot: Yes', NULL, NULL),
+(144, 27, 'Orb of Harmony', 'Zenyatta casts an orb over the shoulder of a targeted ally. So long as Zenyatta maintains line of sight, the orb slowly restores health to his ally. Only one ally can receive the orb’s benefit at a time.', 'Healing:  30 HP per second', 'Projectile Speed: 120 m/s', 'Range: 40 m', 'Duration: 3 seconds or until target is changed', 'Cooldown: none', NULL, NULL, NULL, NULL, NULL),
+(145, 27, 'Orb of Discord', 'Attaching the orb of discord to an opponent amplifies the amount of damage they receive for as long as Zenyatta maintains line of sight. Only one opponent can suffer the orb’s effects at a time.', 'Damage Resistance Debuff:   -30% resistance', 'Projectile Speed: 120 m/s', 'Range: 40 m', 'Duration: 3 seconds or until target is changed', 'Cooldown: none', NULL, NULL, NULL, NULL, NULL),
+(146, 27, 'Transcendence (Ultimate)', 'Zenyatta enters a state of heightened existence for a short period of time. While transcendent, Zenyatta cannot use abilities or weapons, but is immune to damage and automatically restores his health and that of nearby allies.', 'Radius:  10 m', 'Heal Rate: 300 healing per second', 'Movement Speed: 11 m/s', 'Duration: 6 seconds', NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -331,37 +408,44 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `abilities`
 --
 ALTER TABLE `abilities`
-  MODIFY `ability_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `ability_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
+
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
   MODIFY `cat_id` int(8) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `heroes`
 --
 ALTER TABLE `heroes`
   MODIFY `hero_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
 --
 -- AUTO_INCREMENT for table `maps`
 --
 ALTER TABLE `maps`
   MODIFY `map_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
   MODIFY `post_id` int(8) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `topics`
 --
 ALTER TABLE `topics`
   MODIFY `topic_id` int(8) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `user_id` int(8) NOT NULL AUTO_INCREMENT;
+
 --
 -- Constraints for dumped tables
 --

@@ -3,8 +3,9 @@ font-family: Overwatch;
 src: url("http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff");
 }
 html {
-	background-color: #1a1a1a;
-	
+
+	background-image:url("images/background-overwatch-top.jpg");
+
 }
 
 section {
@@ -25,6 +26,10 @@ section {
 	margin-left: 10em;
 	margin-bottom: 20em;
 	border: solid #363636 0.1em;
+	background-color: rgba(26, 26, 26, 0.5);
+}
+.container:hover{
+	background-color: rgba(52, 52, 52, 0.5);
 }
 .innercontainer {
 	
@@ -112,9 +117,14 @@ section {
 	overflow: auto;
 	width: 200px;
 	float: left;
-	vertical-align: middle;
 	margin-top: 4em;
 	margin-bottom: 5em;
+}
+.cat-icon {
+		flex-grow: 1;
+	overflow: auto;
+	width: 200px;
+	float: left;
 }
 .text-column-ability {
 	flex-grow: 1;
@@ -148,15 +158,15 @@ section {
 .text-column-ability .aname {
 	
 	color: orange; 
-	font-size: 2em; 
+	font-size: 3em; 
 	margin-right: 2.5em;
-	font-family: "Open Sans";
+	font-family: "Overwatch";
 	text-align: right;
 	position: relative;
-    font-size: 2em;
     z-index: 1;
     overflow: hidden;
     text-align: center;
+	text-transform: capitalize;
 }
 
 .aname:before, .aname:after {
@@ -184,9 +194,114 @@ section {
 	margin-right: 5em;
 }
 
-.abili
+.element1 {	
+	width: 75px;
+	height: 75px;
+	font-family: "Overwatch";
+	display:inline-block;
+	margin-right:10px; 
+	vertical-align: middle; 
+	color: #D6D7E6;
+}
 
+.element2 {
+	margin-left: 5px;
+	font-family: "Overwatch"; 
+	font-size: 3.5em; 
+	display:inline-block; 
+	width: 350px; 
+	vertical-align: middle; 
+	color: orange;
+} 
 
+.element3 {
+	margin-left: 4em;
+	font-family: 'Open Sans'; 
+	font-size: 1.5em;
+	display:inline-block; 
+	width: 1000px; 
+	vertical-align: middle; 
+	color: #D6D7E6;
+}
+
+.icon {
+  width: 75px;
+  height: 75px;
+}
+
+.line {
+      margin: auto;
+	  margin-bottom: 2.5em;
+	  margin-top: 2.5em;
+    width: 62.5%;
+    
+	border: solid #363636 0.1em;
+    padding: 10px;
+	background-color: rgba(26, 26, 26, 0.5);
+}
+.line:hover{
+	background-color: rgba(52, 52, 52, 0.5);
+}
+
+.post-title {
+	text-align: center;
+	font-family: "Overwatch"; 
+	font-size: 1.5em; 
+	display:inline-block; 
+	width:60%; 
+	vertical-align: middle;
+	color: orange;
+ } 
+.posted-by, .posted-time {
+	text-align: center;
+	font-family: 'Open Sans'; 
+	font-size: 1em; 
+	display:inline-block; 
+	width: 15%;
+	vertical-align: middle; 
+	color: #D6D7E6;
+}
+.replies {
+	text-align: center;
+		font-family: 'Open Sans'; 
+	font-size: 1em; 
+	display:inline-block; 
+	width: 5%;
+	vertical-align: middle; 
+	color: #D6D7E6;
+	
+}
+.delete {
+		text-align: center;
+		font-family: 'Open Sans'; 
+	font-size: 1em; 
+	display:inline-block; 
+	width: 4%;
+	vertical-align: middle; 
+	color: #D6D7E6;
+}
+.delete-icon {
+	height: 24px;
+	width: 24px;
+	vertical-align: middle;
+}
+.reply-icon {
+	vertical-align: middle;
+}
+.newTopic {
+		text-align: center;
+	font-family: 'Open Sans'; 
+	font-size: 1em; 
+	display:inline-block; 
+	width: 15%;
+	vertical-align: middle; 
+	background-color: Transparent;
+	color: #D6D7E6;
+}
+.newTopic:hover {
+	
+	background-color: rgba(26, 26, 26, 0.5);
+}
 
 
 

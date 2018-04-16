@@ -70,6 +70,10 @@ header li {
 	z-index: 10;
 }
 
+.dropbtn a:hover {
+	color: orange;
+}
+
 
 .dropdown {
     display: inline-block;

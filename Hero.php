@@ -20,6 +20,7 @@ echo $split[1];
 $hero = $_GET['hero'];
 
 ?>
+<html>
 <head lang = "en-US">
 	<meta charset="utf-8">
 	
@@ -359,3 +360,4 @@ function openCity(evt, cityName) {
 
 	document.getElementById("defaultOpen").click();
 </script>
+</html>

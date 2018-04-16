@@ -1,3 +1,9 @@
+<?php
+	include 'connect.php';
+	if(!isset($_SESSION)) {
+		SESSION_START();
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head lang = "en">

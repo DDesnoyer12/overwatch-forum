@@ -1,5 +1,7 @@
+html {
+	background-image:url("images/background-overwatch-top.jpg");
+}
 body {
-    background-color: #4E4E4E;
     text-align: center;         /* make sure IE centers the page too */
 }
  

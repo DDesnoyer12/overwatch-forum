@@ -1,9 +1,72 @@
 <?php
 //create_cat.php
+if(!isset($_SESSION)) {
+	SESSION_START();
+}
 include 'connect.php';
-include 'header.php';
- 
-echo '<h2>Create a topic</h2>';
+$category = $_GET['id'];
+
+?>
+<html>
+<style>
+input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+textarea {
+    width: 50%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+input[type=submit] {
+	text-align: center;
+    width: 50%;
+    background-color: orange;
+    color: white;
+    padding: 14px 20px;
+	margin-top: 5em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+
+</style>
+<head lang = "en-US">
+	<meta charset="utf-8">
+	
+	<title>Overwatch Forum</title>
+	<link rel="stylesheet" href="styles/reset.css" />
+	<link rel="stylesheet" href="newHero.css" />
+	<link rel="icon" href="images/favicon.png" />
+	
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+</head>
+<?php 
+include 'includes/final-header.php';
+?>
+<body>
+<?php
+$sql = "SELECT cat_name FROM categories WHERE cat_id = '".mysqli_real_escape_string($connection, $category)."'";
+$result = mysqli_query($connection, $sql);
+$row = mysqli_fetch_assoc($result);
+echo '<h1 class="cat_title" style="font-family: '.'Overwatch'.'; color:#D6D7E6; font-size: 5em; text-align: center;">New topic for '.$row['cat_name'].'</h1>';
 if($_SESSION['signed_in'] == false)
 {
     //the user is not signed in
@@ -45,18 +108,10 @@ else
             else
             {
          
-                echo '<form method="post" action="">
-                    Subject: <input type="text" name="topic_subject" />
-                    Category:'; 
-                 
-                echo '<select name="topic_cat">';
-                    while($row = mysqli_fetch_assoc($result))
-                    {
-                        echo '<option value="' . $row['cat_id'] . '">' . $row['cat_name'] . '</option>';
-                    }
-                echo '</select>'; 
+                echo '<form style="text-align: center; width: 100%;" method="post" action="">
+                    <h2 class="cat_title" style="font-family: '.'Overwatch'.'; color: orange; font-size: 3em;">Subject:</h2> <input type="text" placeholder="Subject" name="topic_subject" />';
                      
-                echo 'Message: <textarea name="post_content" /></textarea>
+                echo '<h2 class="cat_title" style="font-family: '.'Overwatch'.'; color: orange; font-size: 3em;">Message:</h2><textarea placeholder="Message" name="post_content"/></textarea>
                     <input type="submit" value="Create topic" />
                  </form>';
             }
@@ -85,7 +140,7 @@ else
                                topic_by)
                    VALUES('" . mysqli_real_escape_string($connection, $_POST['topic_subject']) . "',
                                NOW(),
-                               " . mysqli_real_escape_string($connection, $_POST['topic_cat']) . ",
+                               " . mysqli_real_escape_string($connection, $category) . ",
                                " . $_SESSION['user_id'] . "
                                )";
                       
@@ -136,5 +191,5 @@ else
     }
 }
  
-include 'footer.php';
 ?>
+</body>

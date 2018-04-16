@@ -2,46 +2,7 @@
 //signin.php
 include 'connect.php';
 ?>
-<style>
-input[type=text], input[type=password], select {
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-textarea {
-    width: 50%;
-    height: 150px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    font-size: 16px;
-    resize: none;
-}
 
-input[type=submit] {
-	text-align: center;
-    width: 50%;
-    background-color: orange;
-    color: white;
-    padding: 14px 20px;
-	margin-top: 5em;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-
-</style>
 <head lang = "en-US">
 	<meta charset="utf-8">
 	

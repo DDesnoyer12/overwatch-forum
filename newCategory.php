@@ -54,13 +54,11 @@ if(!$result) {
 	</div>
 	';	
 	} else {
-		echo '<div class="line">';
 		while($row = mysqli_fetch_assoc($result)) {
 			
 			echo '<h1 class="cat_title" style="font-family: '.'Overwatch'.'; color:#D6D7E6; font-size: 5em; text-align: center;">Topics in \''.$row['cat_name'].'\'</h1>';
-			echo '<div style="text-align: left;">
+			echo '<div style="margin-top: 1em; text-align: center;">
 		<button class="newTopic" style=""><a href="create_topic.php?id='.$row['cat_id'].'">+ Create New Topic</a></button>
-		</div>
 		</div>';
 		}
 		
@@ -114,7 +112,9 @@ if(!$result) {
                 while($row = mysqli_fetch_assoc($result))
                 {               
 		//	if($row['topic_id'] != NULL) {
-                    				   echo '      
+                    				   echo '   
+
+		<a href="newTopic.php?id='.$row['topic_id'].'">									   
 		<div class="line">
 			<div class="post-title">'.$row['topic_subject'].'</div> 
 			<div class="replies"><img class="reply-icon" src="images/reply-icon.png"/>0</div>
@@ -123,7 +123,7 @@ if(!$result) {
 			if(isset($_SESSION['user_level']) && $_SESSION['user_level'] == 1) {
 				echo '<div title="Delete" class="delete"><a href="deletetopic.php?id='.$row['topic_id'].'"><img class="delete-icon" src="images/delete.png" /></a></div>';
 			}
-		echo '</div>';
+		echo '</div></a>';
 			//}
                 }
             }

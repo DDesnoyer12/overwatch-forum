@@ -57,11 +57,9 @@
 						</div>';
 						$result = mysqli_query($connection, "SELECT user_icon FROM users WHERE user_name = '".$_SESSION['user_name']."'");
 						while ($row = mysqli_fetch_assoc($result)) {
-							if($row['user_icon'] == NULL) {
-								echo '<img style="width: 100px; height: 100px; border-radius:50%;"src= "images/user-icons/Default.png"/>';
-							} else {
-								echo '<img style="width: 100px; height: 100px; border-radius:50%;"src= "images/user-icons/'.$row['user_icon'].'.png"/>';
-							}
+							
+								echo '<img style="width: 100px; height: 100px;"src= "images/user-icons/'.$row['user_icon'].'.png"/>';
+							
 						}
 						} else {
 							echo '<span style= "margin-left: 0em; font-size: 1.25em;">New? Create An Account!</span>';echo '</button>';
@@ -69,7 +67,7 @@
 							<a href="signin.php">Sign In</a>
 							<a href="signup.php">Sign Up</a>
 						</div>					</div>
-						<img style="width: 100px; height: 100px; border-radius:50%;"src= "images/user-icons/Default.png"/>';
+						<img style="width: 100px; height: 100px;"src= "images/user-icons/0.png"/>';
 							
 						}
 						

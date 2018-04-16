@@ -1,7 +1,9 @@
 <?php
 //create_cat.php
 include 'connect.php';
-include 'header.php';
+if(!isset($_SESSION)) {
+	SESSION_START();
+}
  
 if($_SERVER['REQUEST_METHOD'] != 'POST')
 {
@@ -33,11 +35,15 @@ else
         if(!$result)
         {
             echo 'Your reply has not been saved, please try again later.';
+			
+			header("Location: {$_SERVER["HTTP_REFERER"]}");
         }
         else
         {
             echo 'Your reply has been saved, check out <a href="topic.php?id=' . htmlentities($_GET['id']) . '">the topic</a>.';
-        }
+		
+			header("Location: {$_SERVER["HTTP_REFERER"]}");
+		}
     }
 }
  

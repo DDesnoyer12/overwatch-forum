@@ -23,6 +23,11 @@ include 'includes/final-header.php';
 <section>
 <h1 style="font-family: 'Overwatch'; color:#D6D7E6; font-size: 5em; width: 100%; text-align: center;";>Welcome to the Overwatch Forum!</h1>
 <?php
+		if(isset($_SESSION['user_level']) && $_SESSION['user_level'] == 1) {
+		echo '<div style="margin-top: 1em; text-align: center;">
+		<button class="newTopic" style=""><a href="create_cat.php">+ Create New Category</a></button>
+		</div>';
+		}
 $sql = "SELECT
             *
         FROM

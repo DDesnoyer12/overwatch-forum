@@ -8,46 +8,7 @@ $category = $_GET['id'];
 
 ?>
 <html>
-<style>
-input[type=text], select {
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-textarea {
-    width: 50%;
-    height: 150px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    font-size: 16px;
-    resize: none;
-}
 
-input[type=submit] {
-	text-align: center;
-    width: 50%;
-    background-color: orange;
-    color: white;
-    padding: 14px 20px;
-	margin-top: 5em;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-
-</style>
 <head lang = "en-US">
 	<meta charset="utf-8">
 	
@@ -67,10 +28,11 @@ $sql = "SELECT cat_name FROM categories WHERE cat_id = '".mysqli_real_escape_str
 $result = mysqli_query($connection, $sql);
 $row = mysqli_fetch_assoc($result);
 echo '<h1 class="cat_title" style="font-family: '.'Overwatch'.'; color:#D6D7E6; font-size: 5em; text-align: center;">New topic for '.$row['cat_name'].'</h1>';
-if($_SESSION['signed_in'] == false)
+if(!isset($_SESSION['signed_in']) || (isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == false))
 {
     //the user is not signed in
-    echo 'Sorry, you have to be <a href="/forum/signin.php">signed in</a> to create a topic.';
+	echo '<h1 class="cat_title" style="margin-top: 2em; font-family: '.'Overwatch'.'; color:#D6D7E6; font-size: 2.5em; text-align: center;">Sorry, you have to be <a style="font-size: 1em; color: orange; font-family: '.'Overwatch'.'"; href="signin.php">signed in </a> to create a topic.</h1>';
+
 }
 else
 {
@@ -184,7 +146,8 @@ else
                     $result = mysqli_query($connection, $sql);
                      
                     //after a lot of work, the query succeeded!
-                    echo 'You have successfully created <a href="topic.php?id='. $topicid . '">your new topic</a>.';
+					echo '<h1 class="cat_title" style="margin-top: 2em; font-family: '.'Overwatch'.'; color:orange; font-size: 2.5em; text-align: center;"> You have successfully created <a style="font-size: 1.5em;font-family: '.'Open Sans'.'"; href="topic.php?id='. $topicid . '">your new topic</a></h1>';
+
                 }
             }
         }

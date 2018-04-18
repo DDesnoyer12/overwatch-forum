@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 18, 2018 at 02:52 AM
+-- Generation Time: Apr 18, 2018 at 08:31 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `overwatch_forum`
 --
+CREATE DATABASE IF NOT EXISTS `overwatch_forum` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+USE `overwatch_forum`;
 
 -- --------------------------------------------------------
 
@@ -967,6 +969,13 @@ CREATE TABLE `categories` (
   `cat_description` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`cat_id`, `cat_name`, `cat_description`) VALUES
+(15, 'Announcements', 'Latest overwatch news and updates');
+
 -- --------------------------------------------------------
 
 --
@@ -1035,6 +1044,14 @@ CREATE TABLE `likes` (
   `like_or_dislike` tinyint(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- Dumping data for table `likes`
+--
+
+INSERT INTO `likes` (`like_id`, `user_id`, `post_id`, `like_or_dislike`) VALUES
+(44, 19, 64, 1),
+(45, 19, 65, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -1077,6 +1094,28 @@ INSERT INTO `maps` (`map_id`, `map_name`, `map_description`, `map_type`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `mbox`
+--
+
+CREATE TABLE `mbox` (
+  `id` int(8) NOT NULL,
+  `message` varchar(128) COLLATE utf8_bin NOT NULL,
+  `sentby` int(8) NOT NULL,
+  `sentto` int(8) NOT NULL,
+  `created` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `mbox`
+--
+
+INSERT INTO `mbox` (`id`, `message`, `sentby`, `sentto`, `created`) VALUES
+(1, 'Hi there', 18, 19, '2018-04-18 00:00:00'),
+(2, 'Hi back', 19, 18, '2018-04-18 00:04:00');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `posts`
 --
 
@@ -1087,6 +1126,14 @@ CREATE TABLE `posts` (
   `post_topic` int(8) NOT NULL,
   `post_by` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `posts`
+--
+
+INSERT INTO `posts` (`post_id`, `post_content`, `post_date`, `post_topic`, `post_by`) VALUES
+(64, 'test', '2018-04-18 12:56:25', 43, 18),
+(65, 'test', '2018-04-18 12:56:30', 43, 18);
 
 -- --------------------------------------------------------
 
@@ -1101,6 +1148,13 @@ CREATE TABLE `topics` (
   `topic_cat` int(8) NOT NULL,
   `topic_by` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `topics`
+--
+
+INSERT INTO `topics` (`topic_id`, `topic_subject`, `topic_date`, `topic_cat`, `topic_by`) VALUES
+(43, 'test', '2018-04-18 12:56:25', 15, 18);
 
 -- --------------------------------------------------------
 
@@ -1117,6 +1171,53 @@ CREATE TABLE `users` (
   `user_level` int(8) NOT NULL,
   `user_icon` int(8) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_level`, `user_icon`) VALUES
+(18, 'admintest', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'test@gmail.com', '2018-04-18 12:51:40', 1, 107),
+(19, 'test', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'test@gmail.com', '2018-04-18 13:05:49', 0, 107);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_mailboxes`
+--
+
+CREATE TABLE `user_mailboxes` (
+  `id` int(8) NOT NULL,
+  `user` int(8) NOT NULL,
+  `mailbox` char(3) COLLATE utf8_bin NOT NULL,
+  `message_id` int(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `user_mailboxes`
+--
+
+INSERT INTO `user_mailboxes` (`id`, `user`, `mailbox`, `message_id`) VALUES
+(1, 18, 'Out', 1),
+(2, 19, 'In', 1),
+(3, 19, 'Out', 2),
+(4, 18, 'In', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_profile`
+--
+
+CREATE TABLE `user_profile` (
+  `profile_id` int(8) NOT NULL,
+  `user_id` int(8) NOT NULL,
+  `user_bio` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `favorite_hero` int(8) DEFAULT NULL,
+  `favorite_map` int(8) DEFAULT NULL,
+  `favorite_platform` varchar(20) COLLATE utf8_bin DEFAULT NULL,
+  `platform_username` varchar(20) COLLATE utf8_bin DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Indexes for dumped tables
@@ -1165,6 +1266,12 @@ ALTER TABLE `maps`
   ADD PRIMARY KEY (`map_id`);
 
 --
+-- Indexes for table `mbox`
+--
+ALTER TABLE `mbox`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `posts`
 --
 ALTER TABLE `posts`
@@ -1188,6 +1295,21 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `user_name_unique` (`user_name`);
 
 --
+-- Indexes for table `user_mailboxes`
+--
+ALTER TABLE `user_mailboxes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user_profile`
+--
+ALTER TABLE `user_profile`
+  ADD PRIMARY KEY (`profile_id`),
+  ADD KEY `profile_user` (`user_id`),
+  ADD KEY `profile_favorite_hero` (`favorite_hero`),
+  ADD KEY `profile_favorite_map` (`favorite_map`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -1205,7 +1327,7 @@ ALTER TABLE `ability_stats`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `cat_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `cat_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `heroes`
 --
@@ -1215,27 +1337,42 @@ ALTER TABLE `heroes`
 -- AUTO_INCREMENT for table `likes`
 --
 ALTER TABLE `likes`
-  MODIFY `like_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `like_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 --
 -- AUTO_INCREMENT for table `maps`
 --
 ALTER TABLE `maps`
   MODIFY `map_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
+-- AUTO_INCREMENT for table `mbox`
+--
+ALTER TABLE `mbox`
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `post_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 --
 -- AUTO_INCREMENT for table `topics`
 --
 ALTER TABLE `topics`
-  MODIFY `topic_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `topic_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `user_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+--
+-- AUTO_INCREMENT for table `user_mailboxes`
+--
+ALTER TABLE `user_mailboxes`
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `user_profile`
+--
+ALTER TABLE `user_profile`
+  MODIFY `profile_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- Constraints for dumped tables
 --
@@ -1273,6 +1410,14 @@ ALTER TABLE `posts`
 ALTER TABLE `topics`
   ADD CONSTRAINT `topics_ibfk_1` FOREIGN KEY (`topic_cat`) REFERENCES `categories` (`cat_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `topics_ibfk_2` FOREIGN KEY (`topic_by`) REFERENCES `users` (`user_id`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `user_profile`
+--
+ALTER TABLE `user_profile`
+  ADD CONSTRAINT `profile_favorite_hero` FOREIGN KEY (`favorite_hero`) REFERENCES `heroes` (`hero_id`),
+  ADD CONSTRAINT `profile_favorite_map` FOREIGN KEY (`favorite_map`) REFERENCES `maps` (`map_id`),
+  ADD CONSTRAINT `profile_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

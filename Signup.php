@@ -74,11 +74,12 @@ else
      
     if(!empty($errors)) /*check for an empty array, if there are errors, they're in this array (note the ! operator)*/
     {
-        echo 'Uh-oh.. a couple of fields are not filled in correctly..';
+        
+	echo '<h1 class="cat_title" style="font-family: '.'Overwatch'.'; color:orange; font-size: 5em; text-align: center;">Some fields were entered incorrectly. Try again.</h1>';
         echo '<ul>';
         foreach($errors as $key => $value) /* walk through the array so all the errors get displayed */
         {
-            echo '<li>' . $value . '</li>'; /* this generates a nice error list */
+            echo '<li style="font-family:'.'Overwatch'.'; color: #D6D7E6; text-align: center; font-size: 3em;">' . $value . '</li>'; /* this generates a nice error list */
         }
         echo '</ul>';
     }
@@ -104,7 +105,9 @@ else
         }
         else
         {
-            echo 'Successfully registered. You can now <a href="signin.php">sign in</a> and start posting! :-)';
+			
+			echo '<h1 class="cat_title" style="font-family: '.'Overwatch'.'; color:orange; font-size: 5em; text-align: center;">Successfully Registered. You can now <a style="color: #D6D7E6;" href="signin.php">sign in</a> and start posting!</h1>';
+
         }
     }
 }

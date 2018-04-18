@@ -62,7 +62,8 @@ else
          
         if(!empty($errors)) /*check for an empty array, if there are errors, they're in this array (note the ! operator)*/
         {
-            echo 'Uh-oh.. a couple of fields are not filled in correctly..';
+            
+			echo '<h1 class="cat_title" style="font-family: '.'Overwatch'.'; color:#D6D7E6; font-size: 5em; text-align: center;">Some fields were entered incorrect.y Try again.</h1>';
             echo '<ul>';
             foreach($errors as $key => $value) /* walk through the array so all the errors get displayed */
             {

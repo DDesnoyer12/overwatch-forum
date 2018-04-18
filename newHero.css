@@ -229,9 +229,10 @@ section {
 }
 
 .line {
-      margin: auto;
-	  margin-bottom: 2.5em;
-	  margin-top: 2.5em;
+	
+    margin: auto;
+	margin-bottom: 2.5em;
+	margin-top: 2.5em;
     width: 62.5%;
     
 	border: solid #363636 0.1em;
@@ -247,7 +248,7 @@ section {
 	font-family: "Overwatch"; 
 	font-size: 1.5em; 
 	display:inline-block; 
-	width:60%; 
+	width:48%; 
 	vertical-align: middle;
 	color: orange;
  } 
@@ -265,7 +266,7 @@ section {
 		font-family: 'Open Sans'; 
 	font-size: 1em; 
 	display:inline-block; 
-	width: 5%;
+	width: 7.5%;
 	vertical-align: middle; 
 	color: #D6D7E6;
 	
@@ -429,5 +430,19 @@ input[type=submit]:hover {
 }
 .hiddenlike {
 	margin: 0;
+}
+    .radio_item{
+    display: none !important;
+    }
+
+    .label_item {
+    }
+    
+    .radio_item:checked + label img {
+		border: solid #D6D7E6 2px;
+    }
+
+label {
+cursor: pointer;   
 }
 

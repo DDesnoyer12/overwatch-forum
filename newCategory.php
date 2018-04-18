@@ -101,7 +101,8 @@ if(!$result) {
             {
 				   echo '      
 	<div class="line">
-		<div class="post-title"> Post </div> 
+		<div class="replies">Score</div>
+		<div style="font-family: Open Sans; font-size: 1em;" class="post-title"> Post </div> 
 		<div class="replies">Replies</div>
 		<div class="posted-by">Posted By</div>
 		<div class="posted-time">Time</div>
@@ -111,19 +112,32 @@ if(!$result) {
                      
                 while($row = mysqli_fetch_assoc($result))
                 {               
-		//	if($row['topic_id'] != NULL) {
-                    				   echo '   
-
-		<a class="topicLink" href="newTopic.php?id='.$row['topic_id'].'">									   
-		<div class="line">
-			<div class="post-title">'.$row['topic_subject'].'</div> 
-			<div class="replies"><img class="reply-icon" src="images/reply-icon.png"/>0</div>
-			<div class="posted-by">'.$row['user_name'].'</div>
-			<div class="posted-time">'.date('M. d, h:i A', strtotime($row['topic_date'])).'</div>';
-			if(isset($_SESSION['user_level']) && $_SESSION['user_level'] == 1) {
-				echo '<div title="Delete" class="delete"><a href="deletetopic.php?id='.$row['topic_id'].'"><img class="delete-icon" src="images/delete.png" /></a></div>';
-			}
-		echo '</div></a>';
+		
+				$sql = "SELECT SUM(like_or_dislike) AS score FROM likes, posts, topics WHERE topics.topic_id = ".$row['topic_id']." AND posts.post_id = likes.post_id AND posts.post_topic = topics.topic_id AND posts.post_date = topics.topic_date";
+				$scoreQuery = mysqli_query($connection, $sql);
+				$score = mysqli_fetch_assoc($scoreQuery);
+				echo '<a class="topicLink" href="newTopic.php?id='.$row['topic_id'].'">									   
+				<div class="line">';
+				if($score['score'] > 0) {
+					echo'<div class="replies"><img style="width: 16px; height: 16px;" src="images/like-true.png" />'.$score['score'].'</div>';
+				}  else if($score['score'] < 0) {
+					echo'<div class="replies"><img style="width: 16px; height: 16px;" src="images/dislike-true.png" />'.$score['score'].'</div>';
+				} else {
+					echo'<div class="replies"><img style="width: 16px; height: 16px;" src="images/like.png" />0</div>';
+				
+				}
+					echo'<div style="text-align: center;" class="post-title">'.$row['topic_subject'].'</div>'; 
+					$replysql = "SELECT COUNT(post_id) AS replies FROM posts WHERE post_topic = '".$row['topic_id']."'";
+					$replies = mysqli_query($connection, $replysql);
+					$reply = mysqli_fetch_assoc($replies);
+					echo '<div class="replies"><img class="reply-icon" src="images/reply-icon.png"/>'.$reply['replies'].'</div>';
+					
+					echo '<div style="margin-left: 0.75em;" class="posted-by">'.$row['user_name'].'</div>
+					<div style="margin-left: 0.1em;" class="posted-time">'.date('M. d, h:i A', strtotime($row['topic_date'])).'</div>';
+					if(isset($_SESSION['user_level']) && $_SESSION['user_level'] == 1) {
+						echo '<div title="Delete" class="delete"><a href="deletetopic.php?id='.$row['topic_id'].'"><img class="delete-icon" src="images/delete.png" /></a></div>';
+					}
+				echo '</div></a>';
 			//}
                 }
             }

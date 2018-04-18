@@ -77,11 +77,11 @@ $hero = $_GET['hero'];
 	<div class="text-column-bio">
 		<div class="wrapper">
 			<h4 class="bstats">Bio</h4>
-			<p style="font-size: 1em;"><span><strong>Real Name: </strong></span><span>'.$info['hero_name_real'].'</span></p>
-			<p style="font-size: 1em;"><span><strong>Age: </strong></span><span>'.$info['hero_age'].'</span></p>
-			<p style="font-size: 1em;"><span><strong>Occupation: </strong></span><span>'.$info['hero_occupation'].'</span></p>
-			<p style="font-size: 1em;"><span><strong>Base Of Operations: </strong></span><span>'.$info['hero_bop'].'</span></p>
-			<p style="font-size: 1em;"><span><strong>Affiliation: </strong></span><span></span>'.$info['hero_affiliation'].'</p>
+			<p style="font-size: 1em;"><span><strong style="color: orange;">Real Name: </strong></span><span>'.$info['hero_name_real'].'</span></p>
+			<p style="font-size: 1em;"><span><strong style="color: orange;">Age: </strong></span><span>'.$info['hero_age'].'</span></p>
+			<p style="font-size: 1em;"><span><strong style="color: orange;">Occupation: </strong></span><span>'.$info['hero_occupation'].'</span></p>
+			<p style="font-size: 1em;"><span><strong style="color: orange;">Base Of Operations: </strong></span><span>'.$info['hero_bop'].'</span></p>
+			<p style="font-size: 1em;"><span><strong style="color: orange;">Affiliation: </strong></span><span></span>'.$info['hero_affiliation'].'</p>
 		</div>
 	</div>
 	

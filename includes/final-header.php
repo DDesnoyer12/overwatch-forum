@@ -58,7 +58,7 @@
 						$result = mysqli_query($connection, "SELECT user_icon FROM users WHERE user_name = '".$_SESSION['user_name']."'");
 						while ($row = mysqli_fetch_assoc($result)) {
 							
-								echo '<img style="vertical-align: middle; width: 100px; height: 100px;"src= "images/user-icons/'.$row['user_icon'].'.png"/>';
+								echo '<img style="border: solid #393939 1px; vertical-align: middle; width: 100px; height: 100px;"src= "images/user-icons/'.$row['user_icon'].'.png"/>';
 							
 						}
 						} else {
@@ -67,7 +67,7 @@
 							<a href="signin.php">Sign In</a>
 							<a href="signup.php">Sign Up</a>
 						</div>					</div>
-						<img style="vertical-align: middle; width: 100px; height: 100px;"src= "images/user-icons/0.png"/>';
+						<img border: solid #393939 1px; style="vertical-align: middle; width: 100px; height: 100px;"src= "images/user-icons/0.png"/>';
 							
 						}
 						

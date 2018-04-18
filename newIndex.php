@@ -44,7 +44,8 @@ else
 {
     if(mysqli_num_rows($result) == 0)
     {
-        echo 'No categories defined yet.';
+        echo '<h1 style="font-family: '.'Overwatch'.'; color:orange; font-size: 3em; width: 100%; text-align: center;";>No categories created yet. Wait for an admin to make some!</h1>';
+
     }
     else
     {

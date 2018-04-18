@@ -70,7 +70,7 @@ if(!isset($_SESSION)) {
 					echo '<h2 class="cat_title" style="font-family: '.'Overwatch'.'; color: orange; font-size: 3em;">Platform you play on:</h2>
 					<select style= "width: 25%;" name="platform">
 					<option value="None" selected>None</option>
-					<potion value="PC">PC</option>
+					<option value="PC">PC</option>
 					<option value="Xbox One">Xbox One</option>
 					<option value="Playstation 4">Playstation 4</option>
 					</select>

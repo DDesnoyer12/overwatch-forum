@@ -53,6 +53,7 @@
 							echo '<span style= "margin-left: 0em; font-size: 1.5em;">Hello, '.$_SESSION['user_name'].'</span>';echo '</button>';
 							echo '<div style="font-size: 1.5em;" class="dropdown-content">
 							<a href="Account.php?id='.$_SESSION['user_id'].'">Your Account</a>
+							<a href="inbox.php">Your inbox</a>
 							<a href="signout.php">Sign Out</a>
 						</div>';
 						$result = mysqli_query($connection, "SELECT user_icon FROM users WHERE user_name = '".$_SESSION['user_name']."'");

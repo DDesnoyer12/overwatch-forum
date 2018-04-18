@@ -12,7 +12,7 @@ if(!isset($_SESSION)) {
 <head lang = "en">
 	<meta charset="utf-8">
 	
-	<title>Create Profile</title>
+	<title>Inbox</title>
 	<link rel="stylesheet" href="styles/reset.css" />
 	<link rel="stylesheet" href="styles/css-header.css" />
 	<link rel="stylesheet" href="newHero.css" />

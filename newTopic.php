@@ -47,6 +47,7 @@ else
     posts.post_content,
     posts.post_date,
     posts.post_by,
+	posts.post_id,
     users.user_id,
     users.user_name,
 	users.user_icon
@@ -76,25 +77,97 @@ WHERE
             else
             {
 				while($row = mysqli_fetch_assoc($result)) {
+					if(!isset($_SESSION) || !isset($_SESSION['signed_in']) || $_SESSION['signed_in'] == false) {
+						echo '
+						<div class="topicBox">
+						<div style="width: 3%; vertical-align: middle;" class="like-section">
+							<a href="signin.php"><button type="submit" class="likebutton"></button></a>
+							</form>';
+							$totalquery = "SELECT SUM(like_or_dislike) AS total FROM likes WHERE post_id = ".$row['post_id'];
+							$total = mysqli_query($connection, $totalquery);
+							$num = mysqli_fetch_assoc($total);
+							if($num['total'] == NULL) {
+								echo '<p style="color: #D6D7E6; font-family: '."Open Sans".'; text-align: center;">0</p>';
+							
+							}
+							echo '<p style="color: #D6D7E6; font-family: '."Open Sans".'; text-align: center;">'.$num['total'].'</p>';
+							
+							echo '<a href="signin.php"><button class="dislikebutton" type="submit"></button></a>';							
+						
+						
+					} else {
 					echo '
-						<div class="line">
+						<div class="topicBox"><div style="width: 3%; vertical-align: middle;" class="like-section">
+							<form class="hiddenlike" name="like" method="post" action="like.php">
+							<input type="hidden" name="user_id" value='.$_SESSION['user_id'].' />
+							<input type="hidden" name="post_id" value='.$row['post_id'].' />
+							<input type="hidden" name="type" value=1 />
+							<input type="hidden" name="topic_id" value='.$_GET['id'].'/>';
+							
+							$likequery = "SELECT * FROM likes WHERE user_id = ".$_SESSION['user_id']." AND post_id = ".$row['post_id'];
+							$status = mysqli_query($connection, $likequery);
+							if(mysqli_num_rows($status) == 0) {
+							echo '<button class="likebutton" type="submit"></button>';
+							} else {
+								$temp = mysqli_fetch_assoc($status);
+								if($temp['like_or_dislike'] == 1) {
+									echo '<button class="likebutton-true" type="submit"></button>';
+								} else {
+									echo '<button class="likebutton" type="submit"></button>';
+								}
+							}
+							echo '
+							</form>';
+							$totalquery = "SELECT SUM(like_or_dislike) AS total FROM likes WHERE post_id = ".$row['post_id'];
+							$total = mysqli_query($connection, $totalquery);
+							$num = mysqli_fetch_assoc($total);
+							if($num['total'] == NULL) {
+								echo '<p style="color: #D6D7E6; font-family: '."Open Sans".'; text-align: center;">0</p>';
+							
+							}
+							echo '<p style="color: #D6D7E6; font-family: '."Open Sans".'; text-align: center;">'.$num['total'].'</p>';
+							echo '<form class="hiddenlike" name="like" method="post" action="like.php">
+							<input type="hidden" name="user_id" value='.$_SESSION['user_id'].' />
+							<input type="hidden" name="post_id" value='.$row['post_id'].' />
+							<input type="hidden" name="type" value=-1 />
+							<input type="hidden" name="topic_id" value='.$_GET['id'].'/>';
+							$likequery = "SELECT * FROM likes WHERE user_id = ".$_SESSION['user_id']." AND post_id = ".$row['post_id'];
+							$status = mysqli_query($connection, $likequery);
+							if(mysqli_num_rows($status) == 0) {
+							echo '<button class="dislikebutton" type="submit"></button>';
+							} else {
+								$temp = mysqli_fetch_assoc($status);
+								if($temp['like_or_dislike'] == -1) {
+									echo '<button class="dislikebutton-true" type="submit"></button>';
+								} else {
+									echo '<button class="dislikebutton" type="submit"></button>';
+								}
+							
+							}
+					}
+							echo '</form>
+							</div>
 							<div class="user-land">
 							<div> <img class="user-img" src="images/user-icons/'.$row['user_icon'].'.png" />
 							</div> 
 							<div class="post-user"> 
-							'.$row['user_name'].'
+							<a style="color: orange;" href="Account.php?id='.$row['user_id'].'">'.$row['user_name'].'</a>
 							</div>
 							<div class="post-time">
 							'.date('M. d, h:i A', strtotime($row['post_date'])).'
 							</div>
+							
 							</div>
 							<div class="post-content">
 								<p>
 								'.$row['post_content'].'
 								</p>
-							</div>
-						</div>';
-					
+							</div>';
+							if(isset($_SESSION['user_level']) && $_SESSION['user_level'] == 1) {
+								echo '<div title="Delete" class="delete"><a href="deletepost.php?id='.$row['post_id'].'"><img class="delete-icon" src="images/delete.png" /></a></div>
+								</div>';
+							}
+						echo '</div>';				
 				}
 			}
 
@@ -104,8 +177,7 @@ WHERE
 				echo '<form method="post" action="reply.php?id='.$_GET['id'].'">';
                 echo '<textarea placeholder="Leave a Reply" name="reply-content"/></textarea>
                     <input type="submit" value="Reply" />
-                 </form>';
-				 echo '</div>';
+                 </form></div>';
 	}
 }
 }

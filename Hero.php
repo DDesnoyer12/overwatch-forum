@@ -170,13 +170,16 @@ echo'</div>';
 			echo '</figure>
 		</div>
 		<div class="text-column-ability">
-			<h3 class="aname">'.$info['ability_name'].'</h3>
+			<h3 class="aname">'.str_replace(array("(", ")"), array("( ", " )"),$info['ability_name']).'</h3>
 			
 			<p class="ability-description"><span><span>'.$info['ability_description'].'</span></p>
 			<div class="ability-text-wrapper" >';
-				for($i = 0; $i < 10; $i++) {
-					if($info['ability_'.$index[$i].''] != NULL) {
-						$split = explode(':', $info['ability_'.$index[$i].'']);
+				$sql2 = "SELECT ability_stat FROM ability_stats WHERE ability_id = '".$info['ability_id']."'";
+				$stats = mysqli_query($connection, $sql2);
+				
+				while($stat = mysqli_fetch_assoc($stats)) {
+					if($stat['ability_stat'] != NULL) {
+						$split = explode(':', $stat['ability_stat']);
 						echo '
 				<p><span><strong><span>'. $split[0].":".'</span></strong></span><span>'.$split[1].'</span></p>';
 					}

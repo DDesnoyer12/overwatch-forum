@@ -56,7 +56,7 @@ if(!$result) {
 	} else {
 		while($row = mysqli_fetch_assoc($result)) {
 			
-			echo '<h1 class="cat_title" style="font-family: '.'Overwatch'.'; color:#D6D7E6; font-size: 5em; text-align: center;">Topics in \''.$row['cat_name'].'\'</h1>';
+			echo '<h1 class="cat_title" style="font-family: '.'Overwatch'.'; color:orange; font-size: 5em; text-align: center;">'.$row['cat_name'].'</h1>';
 			echo '<div style="margin-top: 1em; text-align: center;">
 		<button class="newTopic" style=""><a href="create_topic.php?id='.$row['cat_id'].'">+ Create New Topic</a></button>
 		</div>';
@@ -114,7 +114,7 @@ if(!$result) {
 		//	if($row['topic_id'] != NULL) {
                     				   echo '   
 
-		<a href="newTopic.php?id='.$row['topic_id'].'">									   
+		<a class="topicLink" href="newTopic.php?id='.$row['topic_id'].'">									   
 		<div class="line">
 			<div class="post-title">'.$row['topic_subject'].'</div> 
 			<div class="replies"><img class="reply-icon" src="images/reply-icon.png"/>0</div>

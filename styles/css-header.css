@@ -35,9 +35,15 @@ a{
 
 	text-decoration:none;
 }
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	color: #D7D8E7;
+}
 header ul {
     list-style-type: none;
-    margin: 0;
+    margin-bottom: 1em;
     padding: 0;
 	padding-top: 1em;
     overflow: hidden;

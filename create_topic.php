@@ -146,7 +146,7 @@ else
                     $result = mysqli_query($connection, $sql);
                      
                     //after a lot of work, the query succeeded!
-					echo '<h1 class="cat_title" style="margin-top: 2em; font-family: '.'Overwatch'.'; color:orange; font-size: 2.5em; text-align: center;"> You have successfully created <a style="font-size: 1.5em;font-family: '.'Open Sans'.'"; href="topic.php?id='. $topicid . '">your new topic</a></h1>';
+					echo '<h1 class="cat_title" style="margin-top: 2em; font-family: '.'Overwatch'.'; color:orange; font-size: 2.5em; text-align: center;"> You have successfully created <a style="font-size: 1em;font-family: '.'Overwatch'.'"; href="newTopic.php?id='. $topicid . '">your new topic</a></h1>';
 
                 }
             }

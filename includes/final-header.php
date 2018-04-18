@@ -44,30 +44,30 @@
 				-->
 
 
-				<li style="float: right; margin-right: 5em; font-size: 1em; border: none;">
+				<li style="float: right; margin-bottom: 0em; margin-right: 5em; font-size: 1em; border: none;">
 					<div class="dropdown">						
 						<button class="dropbtn">
 						<?php
 						if(isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == true)
 						{	
-							echo '<span style= "margin-left: 0em; font-size: 1.25em;">Hello, '.$_SESSION['user_name'].'</span>';echo '</button>';
-							echo '<div class="dropdown-content">
-							<a href="Account.php">Your Account</a>
+							echo '<span style= "margin-left: 0em; font-size: 1.5em;">Hello, '.$_SESSION['user_name'].'</span>';echo '</button>';
+							echo '<div style="font-size: 1.5em;" class="dropdown-content">
+							<a href="Account.php?id='.$_SESSION['user_id'].'">Your Account</a>
 							<a href="signout.php">Sign Out</a>
 						</div>';
 						$result = mysqli_query($connection, "SELECT user_icon FROM users WHERE user_name = '".$_SESSION['user_name']."'");
 						while ($row = mysqli_fetch_assoc($result)) {
 							
-								echo '<img style="width: 100px; height: 100px;"src= "images/user-icons/'.$row['user_icon'].'.png"/>';
+								echo '<img style="vertical-align: middle; width: 100px; height: 100px;"src= "images/user-icons/'.$row['user_icon'].'.png"/>';
 							
 						}
 						} else {
-							echo '<span style= "margin-left: 0em; font-size: 1.25em;">New? Create An Account!</span>';echo '</button>';
+							echo '<span style= "margin-left: 0em; font-size: 1.5em;">New? Create An Account!</span>';echo '</button>';
 							echo '<div class="dropdown-content">
 							<a href="signin.php">Sign In</a>
 							<a href="signup.php">Sign Up</a>
 						</div>					</div>
-						<img style="width: 100px; height: 100px;"src= "images/user-icons/0.png"/>';
+						<img style="vertical-align: middle; width: 100px; height: 100px;"src= "images/user-icons/0.png"/>';
 							
 						}
 						

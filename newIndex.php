@@ -50,7 +50,7 @@ else
     {
 		while($row = mysqli_fetch_assoc($result))
         {        echo '      
-	<a href="newCategory.php?id='.$row['cat_id'].'">
+	<a class="topicLink" href="newCategory.php?id='.$row['cat_id'].'">
 	<div class="line">
 <div class="element1">  <img class="icon" src="https://us.battle.net/forums/static/images/logos/logo-small-overwatch.png"/> </div> 
 <div class="element2">'.$row['cat_name'].' </div> 

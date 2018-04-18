@@ -4,7 +4,21 @@ include 'connect.php';
 if(!isset($_SESSION)) {
 	SESSION_START();
 }
- 
+?>
+<html>
+<head lang = "en-US">
+	<meta charset="utf-8">
+	
+	<title>Overwatch Forum</title>
+	<link rel="stylesheet" href="styles/reset.css" />
+	<link rel="stylesheet" href="newHero.css" />
+	<link rel="icon" href="images/favicon.png" />
+	
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+</head>
+<?php
+include 'includes/final-header.php';
+
 if($_SERVER['REQUEST_METHOD'] != 'POST')
 {
     //someone is calling the file directly, which we don't want
@@ -13,9 +27,9 @@ if($_SERVER['REQUEST_METHOD'] != 'POST')
 else
 {
     //check for sign in status
-    if(!$_SESSION['signed_in'])
+    if(!isset($_SESSION['signed_in']) || !$_SESSION['signed_in'])
     {
-        echo 'You must be signed in to post a reply.';
+        echo '<h1 style="width: 90%; text-align: center; font-family: '.'Overwatch'.'; color: #D6D7E6; font-size: 2.5em;">You must be <a style="color: orange;"href="signin.php">signed in</a> to reply.<h1>';
     }
     else
     {

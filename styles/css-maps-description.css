@@ -1,0 +1,106 @@
+@font-face { 
+font-family: Overwatch; 
+src: url("http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff");
+}
+html {
+		background-image:url("../images/background-overwatch-top.jpg");
+
+}
+h1 {
+	text-align: center;
+	font-family: Overwatch;
+	font-size: 7em;
+	color: #D7D8E7;
+}
+
+h2 {
+	text-align: center;
+	font-family: Overwatch;
+	font-size: 4em;
+	color: #D7D8E7;
+	text-align: left;
+	
+}
+.ability-name {
+	font-size: 1.5em;
+	font-family: Overwatch;
+	color: orange;
+	margin-bottom: 7em;
+	margin-right: 7em;
+	margin-left: 7em;
+}
+
+
+.ability-table {
+	text-align:center;
+	margin-left: 2em;
+	margin-right: 2em;
+}
+.abilities th{
+	font-family: Overwatch;
+	color: #D7D8E7;
+	font-size: 5em;
+}
+.abilities td{
+	font-family: Overwatch;
+	color: orange;
+	font-size: 1.5em;
+}
+
+.comment {
+	border: solid #D7D8E7 0.1em;
+	border-radius: 1em;
+	margin: 1em 2.5em 1em 5em;
+	padding: 1em 0em 1em 0em;
+	background-color: #D7D8E7;
+}
+
+.author {
+	font-size: 4em;
+	font-family: Overwatch;
+}
+.time {
+	font-family: Overwatch;
+	font-size: 1.5em;
+}
+.comment-body {
+	font-size: 3em;
+	font-family: Overwatch;
+	padding-left: 3em;
+}
+
+.comment-section {
+	clear: both;
+}
+
+.picture {
+	display: block;
+	width:70%;
+	margin:  auto;
+	
+}
+label {
+	font-size: 2em;
+	color: #D7D8E7;
+	font-family: Overwatch;
+	text-align: left;
+}
+input[type="text"] {
+	width: 10em;
+	height: 2em;
+}
+textarea {
+	margin-top: 2em;
+	vertical-align: top;
+	width: 30em;
+	height: 8em;
+}
+
+input[type="submit"] {
+	background-color: #D7D8E7;
+	margin-top: 0.5em;
+	margin-left: 0.5em;
+	padding: .25em;
+}
+
+

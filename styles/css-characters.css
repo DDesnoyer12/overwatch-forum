@@ -3,6 +3,10 @@ font-family: Overwatch;
 src: url("http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff");
 }
 
+html {
+	background-image:url("../images/background-overwatch-top.jpg");
+}
+
 h1 {
 	text-align: center;
 	font-family: Overwatch;
@@ -18,38 +22,53 @@ h1 {
 	display: inline-block;
 	font-family: Overwatch;
 	font-size: 2.5em;
+	color: orange;
 	padding: 0em .5em 0em .5em;
 	text-decoration: underline;
 }
 
-#character-list ul li:hover {
-	background-color: orange;
+#character-list ul li a:hover {
+	color: orange;
 }
-
-#character-div ul {
+#character-div table {
 	text-align: center;
-}
-
-#character-div ul li{
-	display: inline-block;;
-	font-family: Overwatch;
-	font-size: 5em;
-	text-decoration: underline;
-	color: #D7D8E7;
+	margin: auto;
 }
 #character-div table td p {
 	font-size: 2.5em;
 	font-family: Overwatch;
 	color: #D7D8E7;
 }
-#character-div ul img{
-	zoom: 50%;
-}
 
 #character-div table tr td {
 	text-align: center;
+	margin: 1em;
+	padding: 1em;
 }
 
+#character-div table tr td:hover {
+	background-color: orange;
+}
+#character-div table tr td:hover p {
+	color: black;
+}
+
+.roleicon {
+	zoom: 25%;
+}
+.herotype {
+	font-family: Overwatch;
+	font-size: 2em;
+	color: orange;
+	margin-right: 15em;
+	margin-left: 15em;
+	margin-top: 2em;
+}
 #character-div table img{
-	zoom: 50%;
+	
+	
+	/*-webkit-transform: skew(25rad);
+    -ms-transform: skew(25rad);
+    transform: skew(25rad);
+	Used to skew images, not needed here but may be useful somewhere else */
 }

@@ -1,26 +1,34 @@
+<?php
+	include 'connect.php';
+	if(!isset($_SESSION)) {
+		SESSION_START();
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head lang = "en">
 	<meta charset="utf-8">
 	<title>An Overwatch Fan Website</title>
 	<link rel="stylesheet" href="styles/reset.css"/>
-	<link rel="stylesheet" href="styles/css-header.css" />
+	<link rel="stylesheet" href="styles/css-home.css" />
+	<link rel="icon" href="images/favicon.png" />
 </head>
 <body>
 <?php 
 	include 'includes/final-header.php';
 ?>
-<!--
-<header>
-<table>
-<tr>
-<td><img id="logo" src="images/overwatchlogo.png"/></td>
-<td><a href = "#">Home </a></td>
-<td><a href = "#">Maps </a></td>
-<td><a href = "#">Characters</a></td>
-<td class = "last"><a href = "#">Tier List </a></td></tr>
-</table>
-</header> -->
+<section>
+	<div>
+		<img  style="margin-top: 3.5em;" id="home-logo" src="images/overwatch-home-logo.png" />
+		
+		<br />
+		<h1>Welcome to the Overwatch Forum!</h1>
+		<h3>
+		"Never accept the world as it appears to be, dare to see it for what it could be." -Dr. Harold Winston
+		</h3>
+	</div>
+	
+</section>
 </body>
 
 </html>

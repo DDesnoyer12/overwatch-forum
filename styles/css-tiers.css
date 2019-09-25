@@ -1,0 +1,118 @@
+@font-face { 
+font-family: Overwatch; 
+src: url("http://us.battle.net/forums/static/fonts/bignoodletoo/bignoodletoo.woff");
+}
+
+html {
+		background-image:url("../images/background-overwatch-top.jpg");
+
+}
+h1 {
+	text-align: center;
+	font-family: Overwatch;
+	font-size: 10em;
+	color: #D7D8E7;
+}
+
+h2 {
+	text-align: center;
+	font-family: Overwatch;
+	font-size: 1.5em;
+	color: #D7D8E7;
+}
+.hero:hover {
+	background-color: black;
+}
+.hero:hover a {
+	background-color: black;
+	color: orange;
+}
+img.pic {
+	zoom: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+#character-tier table, tr, th, td {
+	text-align: center;
+	border-spacing: 0.5rem;
+	/* border-collapse: collapse; */
+	padding: 0.5em;
+	margin: auto;
+	font-size: 1.5em;
+	font-family: Overwatch;
+	color: #D7D8E7;
+	border: 1px solid #D7D8E7;
+}
+
+.one {
+	background-color: #47473e;
+}
+
+.two {
+	background-color: #6a6d64;
+}
+
+.three {
+	background-color: #919182;
+}
+
+.four {
+	background-color: #adada6;
+}
+
+.five {
+	background-color: #adafa8;
+}
+
+.Offense {
+	background-color: #3ab50e;
+	
+	
+}
+.Offense:hover a {
+	text-decoration: underline;
+}
+.Tank:hover a {
+	text-decoration: underline;
+}
+.Defense:hover a {
+	text-decoration: underline;
+}
+.Support:hover a {
+	text-decoration: underline;
+}
+.hero {
+	vertical-align: middle;
+	text-align: center;
+	line-height: 100px;
+}
+.icon {
+	float: left;
+	vertical-align: middle;
+	padding-right: 1em;
+}
+
+.Defense {
+	background-color: #06a098;
+	
+	
+}
+.difficulty img{
+	zoom: 2;
+}
+.Tank {
+	background-color: #560101;
+	
+	
+}
+
+.Support {
+	background-color: #ac46ce;
+	
+	
+}
+
+.thead{
+	background-color: #f99e1a;
+}
